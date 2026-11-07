@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <PackageId>Phiale.Design.Avalonia</PackageId>
-    <Version>0.1.0-preview.9</Version>
+    <Version>0.1.0-preview.10-local.1</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Roland Rusiecki</Authors>
@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE.md" Pack="true" PackagePath="/" />
     <PackageReference Include="Avalonia" Version="11.3.7" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.7" />
     <AvaloniaResource Include="Themes/Palette.axaml" />
     <AvaloniaResource Include="Themes/Controls.axaml" />
   </ItemGroup>

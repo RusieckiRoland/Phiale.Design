@@ -66,6 +66,17 @@ foreach (var item in roleDefinitions)
     else if (kind is "double" or "fontFamily" or "fontWeight" or "thickness" or "cornerRadius")
     {
         var value = item.GetProperty("value").GetString() ?? "";
+        if (item.TryGetProperty("platformValues", out var platformValues))
+        {
+            if (kind != "fontFamily" || platformValues.ValueKind != JsonValueKind.Object)
+                throw new InvalidDataException("Platform values are supported only for font families: " + key);
+            foreach (var entry in platformValues.EnumerateObject())
+                if (!new[] { "Wpf", "Avalonia", "WinUI" }.Contains(entry.Name) ||
+                    entry.Value.ValueKind != JsonValueKind.String || string.IsNullOrWhiteSpace(entry.Value.GetString()))
+                    throw new InvalidDataException("Invalid platform font family: " + key);
+            if (platformValues.TryGetProperty(platform, out var platformValue))
+                value = platformValue.GetString()!;
+        }
         if (kind == "double" && (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) ||
                                   !double.IsFinite(number) || number <= 0))
             throw new InvalidDataException("Invalid size: " + key);

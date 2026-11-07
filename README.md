@@ -7,7 +7,7 @@ The libraries are independent of the applications and products that use them.
 | Package | Version | Platform |
 | --- | --- | --- |
 | Phiale.Design.Wpf | 0.1.0-preview.9 | net48, net8.0-windows10.0.19041.0 |
-| Phiale.Design.Avalonia | 0.1.0-preview.9 | net8.0, Avalonia 11.3.7 |
+| Phiale.Design.Avalonia | 0.1.0-preview.10-local.1 | net8.0, Avalonia 11.3.7 |
 | Phiale.Design.WinUI | 0.1.0-preview.11 | net8.0-windows10.0.19041.0, Windows App SDK 1.8 |
 
 Preview status: the public API may change. Building local packages does not
@@ -109,3 +109,31 @@ guarantee identical pixel rendering or full WCAG compliance.
 ## License
 
 [MIT](LICENSE.md). Copyright (c) 2026 Roland Rusiecki.
+
+## Local Avalonia typography correction — 2026-11-07
+
+The author requested correction of the Linux/WSLg typography and temporary use
+of the local feed from Phiale.Shell. The agent selected packaged Inter as the
+Avalonia implementation: `Avalonia.Fonts.Inter` 11.3.7 is a normal transitive
+NuGet dependency, not copied source. No system font installation or application
+style override is required. Font assets and their notices remain in that package.
+WPF and WinUI retain Segoe UI. The catalog records a platform-specific font
+value; generated palettes must not be edited independently.
+
+Local Avalonia version: `0.1.0-preview.10-local.1`, not published.
+Build it with:
+
+```powershell
+dotnet pack Platforms/Avalonia/Phiale.Design.Avalonia/Phiale.Design.Avalonia.csproj -c Release -o artifacts/packages
+```
+
+The font regression checks actual glyph-family resolution, Normal/SemiBold/Bold
+weights and Polish characters, so a successful system fallback cannot mask a
+missing font asset. The calendar input helper now updates layout before computing
+click coordinates, since font changes affect button geometry.
+
+Verification of this correction: Avalonia tests 13/13 on Windows and Ubuntu-22.04
+WSL2, including real Inter glyph resolution. The consuming Shell passed 26/26
+Avalonia tests on both systems and native WSLg Workspace/legacy scenarios with
+the local package. Screenshots and performance limitations are recorded in the
+sibling Phiale.Shell repository at `docs/Done/Linux-Typografia.md`.

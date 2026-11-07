@@ -218,7 +218,7 @@
     <Color x:Key="Phiale.Design.Palette.Teal.20">#0F766E</Color>
     <Color x:Key="Phiale.Design.Palette.Teal.30">#0A655E</Color>
     <Color x:Key="Phiale.Design.Palette.Teal.40">#095A54</Color>
-    <FontFamily x:Key="Phiale.Design.Text.Body.FontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="Phiale.Design.Text.Body.FontFamily">avares://Avalonia.Fonts.Inter/Assets#Inter</FontFamily>
     <x:Double x:Key="Phiale.Design.Opacity.Disabled">0.6</x:Double>
     <CornerRadius x:Key="Phiale.Design.Radius.Medium">6</CornerRadius>
     <x:Double x:Key="Phiale.Design.Size.Border.Stroke">1</x:Double>

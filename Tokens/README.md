@@ -23,3 +23,9 @@ The palette does not imply WCAG compliance. Known contrast limitations:
 white text on `Accent.Light`: 3.87:1; `Border.Default.Light` on white: 1.42:1;
 `Accent` on `Surface.Active`: 3.55:1 in Light and 3.20:1 in Dark.
 Custom role mappings require contrast evaluation in their intended context.
+
+`fontFamily` roles may specify `platformValues` keyed by Wpf/Avalonia/WinUI.
+The shared `value` remains the default. Body font uses packaged Inter for
+Avalonia (`avares://Avalonia.Fonts.Inter/Assets#Inter`), Segoe UI for WPF/WinUI.
+The generator validates platform names and nonempty font values. This avoids
+relying on the system's substitute for a Windows-only font on Linux.

@@ -551,7 +551,10 @@
     {
       "key": "Phiale.Design.Text.Body.FontFamily",
       "kind": "fontFamily",
-      "value": "Segoe UI"
+      "value": "Segoe UI",
+      "platformValues": {
+        "Avalonia": "avares://Avalonia.Fonts.Inter/Assets#Inter"
+      }
     },
     {
       "key": "Phiale.Design.Opacity.Disabled",

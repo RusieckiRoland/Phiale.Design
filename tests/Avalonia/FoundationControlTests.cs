@@ -62,10 +62,28 @@ public sealed class FoundationControlTests
     private static Button Header(Calendar calendar) => calendar.GetVisualDescendants().OfType<Button>().Single(b => b.Name == "PART_HeaderButton");
     private static void Click(TestWindow window, Control target)
     {
+        window.UpdateLayout();
         var point = target.TranslatePoint(new Point(target.Bounds.Width / 2, target.Bounds.Height / 2), window)!.Value;
         window.MouseDown(point, MouseButton.Left);
         window.MouseUp(point, MouseButton.Left);
         TestWindow.Flush();
+    }
+
+    [AvaloniaTest]
+    public void BodyFontLoadsBundledInterWithPolishGlyphsAndRealWeights()
+    {
+        Assert.That(Application.Current!.TryFindResource("Phiale.Design.Text.Body.FontFamily", out var resource), Is.True);
+        var family = (FontFamily)resource!;
+        Assert.That(family.Name, Is.EqualTo("Inter"));
+        Assert.That(family.Key, Is.Not.Null, "Font must reference bundled assets.");
+        foreach (var weight in new[] { FontWeight.Normal, FontWeight.SemiBold, FontWeight.Bold })
+        {
+            Assert.That(FontManager.Current.TryGetGlyphTypeface(new Typeface(family, weight: weight), out var face), Is.True);
+            Assert.That(face!.FamilyName, Does.StartWith("Inter"), "System fallback must not hide a missing font asset.");
+            Assert.That(face.Weight, Is.EqualTo(weight));
+            foreach (var character in "Zażółć gęślą jaźń ĄĆĘŁŃÓŚŹŻ")
+                Assert.That(face.GetGlyph(character), Is.Not.Zero, character.ToString());
+        }
     }
 
     [AvaloniaTest]
