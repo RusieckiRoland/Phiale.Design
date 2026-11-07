@@ -1,0 +1,28 @@
+<Window x:Class="Design.Avalonia.Tests.TestWindow" xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="using:Phiale.Design.Avalonia"
+        Width="1000" Height="620">
+  <Grid ColumnDefinitions="*,*">
+    <ThemeVariantScope x:Name="ScopeRoot" RequestedThemeVariant="Light">
+      <StackPanel Background="{DynamicResource Phiale.Design.Brush.Surface.Base}" Margin="12">
+        <CheckBox x:Name="ChoiceView" Theme="{StaticResource Phiale.Design.Style.CheckBox}" Content="Select an option" IsThreeState="True" />
+        <design:LocalizedCalendar x:Name="CalendarView" Theme="{StaticResource Phiale.Design.Style.Calendar}" LanguageCode="pl-PL" />
+        <Button x:Name="OpenPopup" Theme="{StaticResource Phiale.Design.Style.Button.Secondary}" Content="Calendar popup" />
+        <Popup x:Name="Popup" PlacementTarget="{Binding #OpenPopup}" Placement="Bottom">
+          <Border Theme="{StaticResource Phiale.Design.Style.Surface.Card}">
+            <design:LocalizedCalendar x:Name="PopupCalendar" Theme="{StaticResource Phiale.Design.Style.Calendar}" LanguageCode="en-US" />
+          </Border>
+        </Popup>
+      </StackPanel>
+    </ThemeVariantScope>
+    <StackPanel Grid.Column="1" Margin="12">
+      <ThemeVariantScope x:Name="OtherScope" RequestedThemeVariant="Dark">
+        <StackPanel Background="{DynamicResource Phiale.Design.Brush.Surface.Base}">
+          <CheckBox x:Name="OtherChoice" Theme="{StaticResource Phiale.Design.Style.CheckBox}" Content="Independent dark scope" />
+          <design:LocalizedCalendar x:Name="OtherCalendar" Theme="{StaticResource Phiale.Design.Style.Calendar}" LanguageCode="en-US" />
+        </StackPanel>
+      </ThemeVariantScope>
+      <CheckBox x:Name="HostChoice" Content="Unstyled host control" />
+      <Calendar x:Name="HostCalendar" />
+    </StackPanel>
+  </Grid>
+</Window>

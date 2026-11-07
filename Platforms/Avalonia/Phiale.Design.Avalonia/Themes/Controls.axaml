@@ -1,0 +1,449 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:p="using:Avalonia.Controls.Primitives" xmlns:converters="using:Avalonia.Data.Converters">
+    <!-- The host provides FluentTheme before importing this dictionary. No type-keyed themes. -->
+    <ControlTheme x:Key="Phiale.Design.Style.Text.Body" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Body.FontWeight}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Text.Secondary" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Secondary}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Text.Muted" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Text.Caption" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Secondary}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Surface.Panel" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Surface.Card" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Card.Padding}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Neutral" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Neutral.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Accent" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Accent}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Accent.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Danger" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Danger.Border}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Danger.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Warning" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Warning.Border}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Badge.Warning.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Button.Secondary" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Internal.Opacity.Pressed}" /></Style>
+        <Style Selector="^:focus-visible /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Button.Primary" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Accent}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Accent}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Inverse}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Accent.Strong}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Inverse}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Accent}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Inverse}" />
+        </Style>
+        <Style Selector="^:pressed">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Internal.Opacity.Pressed}" /></Style>
+        <Style Selector="^:focus-visible /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Button.Danger" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Danger.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Hover.Fill}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Danger.Hover.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text}" />
+        </Style>
+        <Style Selector="^:pressed">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Internal.Opacity.Pressed}" /></Style>
+        <Style Selector="^:focus-visible /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Button.Tertiary" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Internal.Opacity.Pressed}" /></Style>
+        <Style Selector="^:focus-visible /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.ToggleButton" TargetType="p:ToggleButton" BasedOn="{StaticResource {x:Type p:ToggleButton}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pressed">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Internal.Opacity.Pressed}" /></Style>
+        <Style Selector="^:checked /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}" />
+        </Style>
+        <Style Selector="^:focus-visible /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.TextBox" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.TextInput.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="SelectionForegroundBrush" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}" />
+        <Style Selector="^:focus, ^:pointerover, ^:disabled">
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        </Style>
+        <Style Selector="^:pointerover /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        </Style>
+        <Style Selector="^:focus /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" />
+        </Style>
+        <Style Selector="^:error /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Danger.Border}" />
+        </Style>
+        <Style Selector="^:disabled">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}" /></Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.ComboBox" TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.TextInput.Padding}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Style Selector="^:disabled">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}" /></Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.ScrollBar" TargetType="p:ScrollBar" BasedOn="{StaticResource {x:Type p:ScrollBar}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Border.Strong}" />
+        <Style Selector="^ /template/ Thumb">        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Border.Strong}" /></Style>
+        <Style Selector="^ /template/ Thumb:pointerover">        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Accent}" /></Style>
+        <Style Selector="^:disabled">        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}" /></Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.CheckBox" TargetType="CheckBox">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Strong}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="Transparent" Padding="{TemplateBinding Padding}">
+                <Grid ColumnDefinitions="Auto,Auto" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                    <Border Name="PART_Indicator" VerticalAlignment="Center"
+                            Width="{DynamicResource Phiale.Design.Internal.Size.CheckBox.Glyph}"
+                            Height="{DynamicResource Phiale.Design.Internal.Size.CheckBox.Glyph}"
+                            Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Path Name="PART_Check" IsVisible="False" Data="M 2,7 L 6,11 L 12,3"
+                                  Stroke="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}"
+                                  StrokeThickness="{DynamicResource Phiale.Design.Size.Focus.Stroke}" />
+                            <Path Name="PART_Mixed" IsVisible="False" Data="M 3,7 L 11,7"
+                                  Stroke="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}"
+                                  StrokeThickness="{DynamicResource Phiale.Design.Size.Focus.Stroke}" />
+                        </Grid>
+                    </Border>
+                    <ContentPresenter Name="PART_ContentPresenter" Grid.Column="1" VerticalAlignment="Center"
+                                      IsVisible="{TemplateBinding Content, Converter={x:Static converters:ObjectConverters.IsNotNull}}"
+                                      Margin="{DynamicResource Phiale.Design.Internal.Thickness.CheckBox.Content.Margin}"
+                                      Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      RecognizesAccessKey="True" Foreground="{TemplateBinding Foreground}" />
+                </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:pointerover"><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill}" /></Style>
+        <Style Selector="^:checked, ^:indeterminate">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Accent}" />
+        </Style>
+        <Style Selector="^:checked /template/ Path#PART_Check"><Setter Property="IsVisible" Value="True" /></Style>
+        <Style Selector="^:indeterminate /template/ Path#PART_Mixed"><Setter Property="IsVisible" Value="True" /></Style>
+        <Style Selector="^:focus-visible"><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" /></Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+        </Style>
+        <Style Selector="^:disabled /template/ Path"><Setter Property="Stroke" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" /></Style>
+    </ControlTheme>
+
+    <!-- Private templates belong to the base calendar, never to the global Button theme. -->
+    <ControlTheme x:Key="Phiale.Design.Internal.Theme.Calendar.Cell" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="MinWidth" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="Margin" Value="{DynamicResource Phiale.Design.Internal.Thickness.Calendar.Cell.Margin}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Name="PART_Root" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}">
+                    <ContentPresenter Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:today"><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Accent}" /></Style>
+        <Style Selector="^:inactive, ^:blackout"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted}" /></Style>
+        <Style Selector="^:pointerover"><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill}" /></Style>
+        <Style Selector="^:selected">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Accent}" />
+        </Style>
+        <Style Selector="^:focus-visible"><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring}" /></Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill}" />
+            <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Internal.Theme.Calendar.Day" TargetType="p:CalendarDayButton"
+                  BasedOn="{StaticResource Phiale.Design.Internal.Theme.Calendar.Cell}" />
+    <ControlTheme x:Key="Phiale.Design.Internal.Theme.Calendar.Month" TargetType="p:CalendarButton"
+                  BasedOn="{StaticResource Phiale.Design.Internal.Theme.Calendar.Cell}" />
+    <ControlTheme x:Key="Phiale.Design.Internal.Theme.Calendar.Item" TargetType="p:CalendarItem">
+        <Setter Property="DayTitleTemplate">
+            <Template><TextBlock Text="{Binding}" HorizontalAlignment="Center" Theme="{StaticResource Phiale.Design.Style.Text.Secondary}" /></Template>
+        </Setter>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{DynamicResource Phiale.Design.Radius.Medium}">
+                    <Grid Name="PART_Root" RowDefinitions="Auto,*">
+                        <Grid ColumnDefinitions="Auto,*,Auto" Background="{TemplateBinding HeaderBackground}">
+                            <Button Name="PART_PreviousButton" Content="‹" Theme="{StaticResource Phiale.Design.Style.Button.Tertiary}" />
+                            <Button Name="PART_HeaderButton" Grid.Column="1" Theme="{StaticResource Phiale.Design.Style.Button.Tertiary}" />
+                            <Button Name="PART_NextButton" Grid.Column="2" Content="›" Theme="{StaticResource Phiale.Design.Style.Button.Tertiary}" />
+                        </Grid>
+                        <Grid Name="PART_MonthView" Grid.Row="1" ColumnDefinitions="*,*,*,*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" />
+                        <Grid Name="PART_YearView" Grid.Row="1" ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto" IsVisible="False" />
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+    <ControlTheme x:Key="Phiale.Design.Style.Calendar" TargetType="Calendar" BasedOn="{StaticResource {x:Type Calendar}}">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="HeaderBackground" Value="{DynamicResource Phiale.Design.Brush.Surface.Header}" />
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="FontFamily" Value="{DynamicResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Name="PART_Root">
+                <p:CalendarItem Name="PART_CalendarItem" Theme="{StaticResource Phiale.Design.Internal.Theme.Calendar.Item}"
+                                Background="{TemplateBinding Background}" HeaderBackground="{TemplateBinding HeaderBackground}"
+                                Foreground="{TemplateBinding Foreground}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}">
+                    <p:CalendarItem.Resources>
+                        <ControlTheme x:Key="{x:Type p:CalendarDayButton}" TargetType="p:CalendarDayButton"
+                                      BasedOn="{StaticResource Phiale.Design.Internal.Theme.Calendar.Day}" />
+                        <ControlTheme x:Key="{x:Type p:CalendarButton}" TargetType="p:CalendarButton"
+                                      BasedOn="{StaticResource Phiale.Design.Internal.Theme.Calendar.Month}" />
+                    </p:CalendarItem.Resources>
+                </p:CalendarItem>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
+

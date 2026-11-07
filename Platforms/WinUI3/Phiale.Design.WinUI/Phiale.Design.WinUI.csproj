@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <UseWinUI>true</UseWinUI>
+    <Nullable>enable</Nullable>
+    <PackageId>Phiale.Design.WinUI</PackageId>
+    <Version>0.1.0-preview.11</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Roland Rusiecki</Authors>
+    <Description>Phiale shared visual roles for WinUI 3.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.250916003" />
+    <Page Update="Themes/Palette.xaml"><Generator>MSBuild:Compile</Generator></Page>
+    <Page Update="Themes/Controls.xaml"><Generator>MSBuild:Compile</Generator></Page>
+    <None Include="buildTransitive/Phiale.Design.WinUI.targets" Pack="true" PackagePath="buildTransitive/Phiale.Design.WinUI.targets" />
+  </ItemGroup>
+  <Target Name="GenerateDesignPalette" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet build &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/Phiale.Design.Generator.csproj&quot; --configuration Release -p:BaseIntermediateOutputPath=obj/WinUI/ -p:BaseOutputPath=bin/WinUI/ --nologo -v:q" />
+    <Exec Command="dotnet &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/bin/WinUI/Release/net8.0/Phiale.Design.Generator.dll&quot; WinUI &quot;$(MSBuildThisFileDirectory)../../../Tokens/design.candidate.json&quot; &quot;$(MSBuildThisFileDirectory)Themes/Palette.xaml&quot;" />
+  </Target>
+</Project>

@@ -1,0 +1,36 @@
+<Window x:Class="Foundation.Avalonia.MainWindow" xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:p="using:Avalonia.Controls.Primitives" Width="900" Height="1000">
+  <StackPanel x:Name="Root">
+    <StackPanel Orientation="Horizontal"><Button x:Name="HostButton" Content="Host" /><TextBox x:Name="HostText" Text="Host text" /></StackPanel>
+    <Grid><Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions>
+    <ThemeVariantScope x:Name="Scope" Grid.Column="0" RequestedThemeVariant="Light"><StackPanel Background="{DynamicResource Phiale.Design.Brush.Surface.Base}">
+      <TextBlock x:Name="Sample0" Theme="{StaticResource Phiale.Design.Style.Text.Body}" Margin="4" Text="Text.Body"></TextBlock>
+      <TextBlock x:Name="Sample1" Theme="{StaticResource Phiale.Design.Style.Text.Secondary}" Margin="4" Text="Text.Secondary"></TextBlock>
+      <TextBlock x:Name="Sample2" Theme="{StaticResource Phiale.Design.Style.Text.Muted}" Margin="4" Text="Text.Muted"></TextBlock>
+      <TextBlock x:Name="Sample3" Theme="{StaticResource Phiale.Design.Style.Text.Caption}" Margin="4" Text="Text.Caption"></TextBlock>
+      <Border x:Name="Sample4" Theme="{StaticResource Phiale.Design.Style.Surface.Panel}" Margin="4"><TextBlock Text="Surface.Panel" Theme="{StaticResource Phiale.Design.Style.Text.Body}" /></Border>
+      <Border x:Name="Sample5" Theme="{StaticResource Phiale.Design.Style.Surface.Card}" Margin="4"><TextBlock Text="Surface.Card" Theme="{StaticResource Phiale.Design.Style.Text.Body}" /></Border>
+      <Border x:Name="Sample6" Theme="{StaticResource Phiale.Design.Style.Badge.Neutral}" Margin="4"><TextBlock Text="Badge.Neutral" Theme="{StaticResource Phiale.Design.Style.Badge.Neutral.Text}" /></Border>
+      <Border Theme="{StaticResource Phiale.Design.Style.Badge.Neutral}" Margin="4"><TextBlock x:Name="Sample7" Theme="{StaticResource Phiale.Design.Style.Badge.Neutral.Text}" Margin="4" Text="Badge.Neutral.Text"></TextBlock></Border>
+      <Border x:Name="Sample8" Theme="{StaticResource Phiale.Design.Style.Badge.Accent}" Margin="4"><TextBlock Text="Badge.Accent" Theme="{StaticResource Phiale.Design.Style.Badge.Accent.Text}" /></Border>
+      <Border Theme="{StaticResource Phiale.Design.Style.Badge.Accent}" Margin="4"><TextBlock x:Name="Sample9" Theme="{StaticResource Phiale.Design.Style.Badge.Accent.Text}" Margin="4" Text="Badge.Accent.Text"></TextBlock></Border>
+      <Border x:Name="Sample10" Theme="{StaticResource Phiale.Design.Style.Badge.Danger}" Margin="4"><TextBlock Text="Badge.Danger" Theme="{StaticResource Phiale.Design.Style.Badge.Danger.Text}" /></Border>
+      <Border Theme="{StaticResource Phiale.Design.Style.Badge.Danger}" Margin="4"><TextBlock x:Name="Sample11" Theme="{StaticResource Phiale.Design.Style.Badge.Danger.Text}" Margin="4" Text="Badge.Danger.Text"></TextBlock></Border>
+      <Border x:Name="Sample12" Theme="{StaticResource Phiale.Design.Style.Badge.Warning}" Margin="4"><TextBlock Text="Badge.Warning" Theme="{StaticResource Phiale.Design.Style.Badge.Warning.Text}" /></Border>
+      <Border Theme="{StaticResource Phiale.Design.Style.Badge.Warning}" Margin="4"><TextBlock x:Name="Sample13" Theme="{StaticResource Phiale.Design.Style.Badge.Warning.Text}" Margin="4" Text="Badge.Warning.Text"></TextBlock></Border>
+      <Button x:Name="Sample14" Theme="{StaticResource Phiale.Design.Style.Button.Secondary}" Margin="4" Content="Button.Secondary"></Button>
+      <Button x:Name="Sample15" Theme="{StaticResource Phiale.Design.Style.Button.Primary}" Margin="4" Content="Button.Primary"></Button>
+      <Button x:Name="Sample16" Theme="{StaticResource Phiale.Design.Style.Button.Danger}" Margin="4" Content="Button.Danger"></Button>
+      <Button x:Name="Sample17" Theme="{StaticResource Phiale.Design.Style.Button.Tertiary}" Margin="4" Content="Button.Tertiary"></Button>
+      <p:ToggleButton x:Name="Sample18" Theme="{StaticResource Phiale.Design.Style.ToggleButton}" Margin="4" Content="ToggleButton"></p:ToggleButton>
+      <TextBox x:Name="Sample19" Theme="{StaticResource Phiale.Design.Style.TextBox}" Margin="4" Text="draft"></TextBox>
+      <ComboBox x:Name="Sample20" Theme="{StaticResource Phiale.Design.Style.ComboBox}" Margin="4" SelectedIndex="0"><ComboBoxItem Content="first" /><ComboBoxItem Content="second" /></ComboBox>
+      <p:ScrollBar x:Name="Sample21" Theme="{StaticResource Phiale.Design.Style.ScrollBar}" Margin="4" Orientation="Horizontal" Minimum="0" Maximum="100" Value="25" ViewportSize="20" Width="180" Height="18"></p:ScrollBar>
+    </StackPanel></ThemeVariantScope>
+    <ThemeVariantScope x:Name="OtherScope" Grid.Column="1" RequestedThemeVariant="Dark"><Button x:Name="OtherButton" Theme="{StaticResource Phiale.Design.Style.Button.Primary}" Content="Independent dark" /></ThemeVariantScope>
+    <ThemeVariantScope x:Name="OverrideScope" Grid.Column="2" RequestedThemeVariant="Light"><ThemeVariantScope.Resources>
+      <ResourceDictionary><ResourceDictionary.ThemeDictionaries><ResourceDictionary x:Key="Light"><SolidColorBrush x:Key="Phiale.Design.Brush.Accent" Color="Orange" /></ResourceDictionary></ResourceDictionary.ThemeDictionaries></ResourceDictionary>
+    </ThemeVariantScope.Resources><Button x:Name="OverrideButton" Theme="{StaticResource Phiale.Design.Style.Button.Primary}" Content="Local override" /></ThemeVariantScope>
+    </Grid>
+  </StackPanel>
+</Window>
+

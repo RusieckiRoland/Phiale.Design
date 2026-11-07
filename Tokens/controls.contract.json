@@ -1,0 +1,105 @@
+{
+  "version": "0.1.0-preview.8",
+  "styles": [
+    {
+      "key": "Phiale.Design.Style.Text.Body",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Text.Secondary",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Text.Muted",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Text.Caption",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Surface.Panel",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Surface.Card",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Neutral",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Neutral.Text",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Accent",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Accent.Text",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Danger",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Danger.Text",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Warning",
+      "targetType": "Border"
+    },
+    {
+      "key": "Phiale.Design.Style.Badge.Warning.Text",
+      "targetType": "TextBlock"
+    },
+    {
+      "key": "Phiale.Design.Style.Button.Secondary",
+      "targetType": "Button"
+    },
+    {
+      "key": "Phiale.Design.Style.Button.Primary",
+      "targetType": "Button"
+    },
+    {
+      "key": "Phiale.Design.Style.Button.Danger",
+      "targetType": "Button"
+    },
+    {
+      "key": "Phiale.Design.Style.Button.Tertiary",
+      "targetType": "Button"
+    },
+    {
+      "key": "Phiale.Design.Style.ToggleButton",
+      "targetType": "ToggleButton"
+    },
+    {
+      "key": "Phiale.Design.Style.TextBox",
+      "targetType": "TextBox"
+    },
+    {
+      "key": "Phiale.Design.Style.ComboBox",
+      "targetType": "ComboBox"
+    },
+    {
+      "key": "Phiale.Design.Style.ScrollBar",
+      "targetType": "ScrollBar"
+    }
+  ],
+  "platformStyles": {
+    "Avalonia": [
+      {
+        "key": "Phiale.Design.Style.CheckBox",
+        "targetType": "CheckBox"
+      },
+      {
+        "key": "Phiale.Design.Style.Calendar",
+        "targetType": "Calendar"
+      }
+    ]
+  }
+}

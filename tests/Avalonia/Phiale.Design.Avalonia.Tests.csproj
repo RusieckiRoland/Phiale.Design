@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Avalonia.Headless.NUnit" Version="11.3.7" />
+    <PackageReference Include="Avalonia.Skia" Version="11.3.7" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.7" />
+    <ProjectReference Condition="'$(DesignUsePackages)' != 'true'" Include="../../Platforms/Avalonia/Phiale.Design.Avalonia/Phiale.Design.Avalonia.csproj" />
+    <PackageReference Condition="'$(DesignUsePackages)' == 'true'" Include="Phiale.Design.Avalonia" Version="0.1.0-preview.9" />
+  </ItemGroup>
+</Project>

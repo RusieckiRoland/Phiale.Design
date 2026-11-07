@@ -1,0 +1,12 @@
+<Project>
+  <Target Name="CopyPhialeDesignWinUIResources" AfterTargets="Build">
+    <PropertyGroup>
+      <_PhialeDesignAssets>$(MSBuildThisFileDirectory)..\lib\net8.0-windows10.0.19041\</_PhialeDesignAssets>
+    </PropertyGroup>
+    <Copy SourceFiles="$(_PhialeDesignAssets)Phiale.Design.WinUI.pri"
+          DestinationFiles="$(OutDir)Phiale.Design.WinUI.pri" SkipUnchangedFiles="true" />
+    <ItemGroup><_PhialeDesignXaml Include="$(_PhialeDesignAssets)Phiale.Design.WinUI\Themes\*.xaml" /></ItemGroup>
+    <Copy SourceFiles="@(_PhialeDesignXaml)"
+          DestinationFolder="$(OutDir)Phiale.Design.WinUI\Themes\" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

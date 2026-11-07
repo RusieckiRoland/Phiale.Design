@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0-windows10.0.19041.0</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <Nullable>enable</Nullable>
+    <PackageId>Phiale.Design.Wpf</PackageId>
+    <Version>0.1.0-preview.9</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Roland Rusiecki</Authors>
+    <Description>Phiale shared visual roles for WPF.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <Page Include="Themes/Palette.xaml" />
+    <Page Include="Themes/HighContrastBlack.xaml" />
+    <Page Include="Themes/Controls.xaml" />
+  </ItemGroup>
+  <Target Name="GenerateDesignPalette"
+          BeforeTargets="DispatchToInnerBuilds;BeforeBuild"
+          Inputs="$(MSBuildThisFileDirectory)../../../Tokens/design.candidate.json;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/Program.cs"
+          Outputs="$(MSBuildThisFileDirectory)Themes/Palette.xaml;$(MSBuildThisFileDirectory)Themes/HighContrastBlack.xaml">
+    <Exec Command="dotnet build &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/Phiale.Design.Generator.csproj&quot; --configuration Release -p:BaseIntermediateOutputPath=obj/Wpf/ -p:BaseOutputPath=bin/Wpf/ --nologo -v:q" />
+    <Exec Command="dotnet &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/bin/Wpf/Release/net8.0/Phiale.Design.Generator.dll&quot; Wpf &quot;$(MSBuildThisFileDirectory)../../../Tokens/design.candidate.json&quot; &quot;$(MSBuildThisFileDirectory)Themes/Palette.xaml&quot;" />
+    <Touch Files="$(MSBuildThisFileDirectory)Themes/Palette.xaml;$(MSBuildThisFileDirectory)Themes/HighContrastBlack.xaml" />
+  </Target>
+</Project>

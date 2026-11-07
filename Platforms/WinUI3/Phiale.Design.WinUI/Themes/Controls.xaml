@@ -1,0 +1,288 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Explicit styles. Platform templates remain responsible for native editing and selection. -->
+    <Style x:Key="Phiale.Design.Style.Text.Body" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="FontWeight" Value="{ThemeResource Phiale.Design.Text.Body.FontWeight}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Text.Secondary" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Secondary}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Text.Muted" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Muted}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Text.Caption" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Secondary}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Surface.Panel" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Surface.Card" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Card.Padding}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Neutral" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Neutral.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Accent" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Fill}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Accent}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Accent.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Text}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Danger" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Danger.Fill}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Danger.Border}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Danger.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Danger.Text}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Warning" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Warning.Border}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Badge.Padding}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Badge.Warning.Text" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Button.Secondary" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{ThemeResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource Phiale.Design.Brush.Focus.Ring}" />
+        <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+          <ContentPresenter x:Name="Chrome" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}">
+            <VisualStateManager.VisualStateGroups><VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal" />
+              <VisualState x:Name="PointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Hover.Fill}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Pressed"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Internal.Opacity.Pressed}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Disabled"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+            </VisualStateGroup></VisualStateManager.VisualStateGroups>
+          </ContentPresenter>
+        </ControlTemplate></Setter.Value></Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Button.Primary" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Accent}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Accent}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Inverse}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{ThemeResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource Phiale.Design.Brush.Focus.Ring}" />
+        <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+          <ContentPresenter x:Name="Chrome" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}">
+            <VisualStateManager.VisualStateGroups><VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal" />
+              <VisualState x:Name="PointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Accent.Strong}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Pressed"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Internal.Opacity.Pressed}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Disabled"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+            </VisualStateGroup></VisualStateManager.VisualStateGroups>
+          </ContentPresenter>
+        </ControlTemplate></Setter.Value></Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Button.Danger" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Danger.Fill}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Danger.Border}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Danger.Text}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{ThemeResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource Phiale.Design.Brush.Focus.Ring}" />
+        <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+          <ContentPresenter x:Name="Chrome" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}">
+            <VisualStateManager.VisualStateGroups><VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal" />
+              <VisualState x:Name="PointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Danger.Fill}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Pressed"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Internal.Opacity.Pressed}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Disabled"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+            </VisualStateGroup></VisualStateManager.VisualStateGroups>
+          </ContentPresenter>
+        </ControlTemplate></Setter.Value></Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.Button.Tertiary" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Subtle}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="FontWeight" Value="{ThemeResource Phiale.Design.Text.Button.FontWeight}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource Phiale.Design.Brush.Focus.Ring}" />
+        <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+          <ContentPresenter x:Name="Chrome" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}">
+            <VisualStateManager.VisualStateGroups><VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal" />
+              <VisualState x:Name="PointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Hover.Fill}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Pressed"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Internal.Opacity.Pressed}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Disabled"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+            </VisualStateGroup></VisualStateManager.VisualStateGroups>
+          </ContentPresenter>
+        </ControlTemplate></Setter.Value></Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToggleButton" TargetType="ToggleButton">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.Button.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.BodySmall.FontSize}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource Phiale.Design.Brush.Focus.Ring}" />
+        <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="ToggleButton">
+          <ContentPresenter x:Name="Chrome" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}">
+            <VisualStateManager.VisualStateGroups><VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal" />
+              <VisualState x:Name="PointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Hover.Fill}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Pressed"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Internal.Opacity.Pressed}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Disabled"><VisualState.Setters>
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="Checked"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Fill}" />
+                <Setter Target="Chrome.Foreground" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Text}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="CheckedPointerOver"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Fill}" />
+                <Setter Target="Chrome.Foreground" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Text}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="CheckedPressed"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Fill}" />
+                <Setter Target="Chrome.Foreground" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Text}" />
+              </VisualState.Setters></VisualState>
+              <VisualState x:Name="CheckedDisabled"><VisualState.Setters>
+                <Setter Target="Chrome.Background" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Fill}" />
+                <Setter Target="Chrome.Foreground" Value="{ThemeResource Phiale.Design.Brush.Selection.Active.Text}" />
+                <Setter Target="Chrome.Opacity" Value="{ThemeResource Phiale.Design.Opacity.Disabled}" />
+              </VisualState.Setters></VisualState>
+            </VisualStateGroup></VisualStateManager.VisualStateGroups>
+          </ContentPresenter>
+        </ControlTemplate></Setter.Value></Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.TextBox" TargetType="TextBox">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.TextInput.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ComboBox" TargetType="ComboBox">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Base}" />
+        <Setter Property="BorderBrush" Value="{ThemeResource Phiale.Design.Brush.Border.Default}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Text.Primary}" />
+        <Setter Property="BorderThickness" Value="{ThemeResource Phiale.Design.Thickness.Border.Default}" />
+        <Setter Property="Padding" Value="{ThemeResource Phiale.Design.Internal.Thickness.TextInput.Padding}" />
+        <Setter Property="MinHeight" Value="{ThemeResource Phiale.Design.Internal.Size.Control.MinHeight}" />
+        <Setter Property="FontFamily" Value="{ThemeResource Phiale.Design.Text.Body.FontFamily}" />
+        <Setter Property="FontSize" Value="{ThemeResource Phiale.Design.Text.Body.FontSize}" />
+        <Setter Property="CornerRadius" Value="{ThemeResource Phiale.Design.Radius.Medium}" />
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ScrollBar" TargetType="ScrollBar">
+        <Setter Property="Background" Value="{ThemeResource Phiale.Design.Brush.Surface.Secondary}" />
+        <Setter Property="Foreground" Value="{ThemeResource Phiale.Design.Brush.Border.Strong}" />
+    </Style>
+</ResourceDictionary>
+

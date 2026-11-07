@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <DefaultItemExcludesInProjectFolder>$(DefaultItemExcludesInProjectFolder);bin/**;obj/**;wsl_obj/**</DefaultItemExcludesInProjectFolder>
+  </PropertyGroup>
+</Project>

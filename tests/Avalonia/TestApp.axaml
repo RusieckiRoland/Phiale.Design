@@ -1,0 +1,7 @@
+<Application x:Class="Design.Avalonia.Tests.TestApp" xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Application.Styles><FluentTheme /></Application.Styles>
+  <Application.Resources><ResourceDictionary><ResourceDictionary.MergedDictionaries>
+    <ResourceInclude Source="avares://Phiale.Design.Avalonia/Themes/Palette.axaml" />
+    <ResourceInclude Source="avares://Phiale.Design.Avalonia/Themes/Controls.axaml" />
+  </ResourceDictionary.MergedDictionaries></ResourceDictionary></Application.Resources>
+</Application>

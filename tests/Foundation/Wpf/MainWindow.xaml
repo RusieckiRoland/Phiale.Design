@@ -1,0 +1,36 @@
+<Window x:Class="Foundation.Wpf.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="clr-namespace:Phiale.Design.Wpf;assembly=Phiale.Design.Wpf" Width="900" Height="1000">
+  <StackPanel x:Name="Root">
+    <StackPanel Orientation="Horizontal"><Button x:Name="HostButton" Content="Host" /><TextBox x:Name="HostText" Text="Host text" /></StackPanel>
+    <Grid><Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions>
+    <Border x:Name="Scope" Grid.Column="0" design:ThemeScope.Mode="Light" Style="{StaticResource Phiale.Design.Style.Surface.Panel}"><StackPanel>
+      <TextBlock x:Name="Sample0" Style="{StaticResource Phiale.Design.Style.Text.Body}" Margin="4" Text="Text.Body"></TextBlock>
+      <TextBlock x:Name="Sample1" Style="{StaticResource Phiale.Design.Style.Text.Secondary}" Margin="4" Text="Text.Secondary"></TextBlock>
+      <TextBlock x:Name="Sample2" Style="{StaticResource Phiale.Design.Style.Text.Muted}" Margin="4" Text="Text.Muted"></TextBlock>
+      <TextBlock x:Name="Sample3" Style="{StaticResource Phiale.Design.Style.Text.Caption}" Margin="4" Text="Text.Caption"></TextBlock>
+      <Border x:Name="Sample4" Style="{StaticResource Phiale.Design.Style.Surface.Panel}" Margin="4"><TextBlock Text="Surface.Panel" Style="{StaticResource Phiale.Design.Style.Text.Body}" /></Border>
+      <Border x:Name="Sample5" Style="{StaticResource Phiale.Design.Style.Surface.Card}" Margin="4"><TextBlock Text="Surface.Card" Style="{StaticResource Phiale.Design.Style.Text.Body}" /></Border>
+      <Border x:Name="Sample6" Style="{StaticResource Phiale.Design.Style.Badge.Neutral}" Margin="4"><TextBlock Text="Badge.Neutral" Style="{StaticResource Phiale.Design.Style.Badge.Neutral.Text}" /></Border>
+      <Border Style="{StaticResource Phiale.Design.Style.Badge.Neutral}" Margin="4"><TextBlock x:Name="Sample7" Style="{StaticResource Phiale.Design.Style.Badge.Neutral.Text}" Margin="4" Text="Badge.Neutral.Text"></TextBlock></Border>
+      <Border x:Name="Sample8" Style="{StaticResource Phiale.Design.Style.Badge.Accent}" Margin="4"><TextBlock Text="Badge.Accent" Style="{StaticResource Phiale.Design.Style.Badge.Accent.Text}" /></Border>
+      <Border Style="{StaticResource Phiale.Design.Style.Badge.Accent}" Margin="4"><TextBlock x:Name="Sample9" Style="{StaticResource Phiale.Design.Style.Badge.Accent.Text}" Margin="4" Text="Badge.Accent.Text"></TextBlock></Border>
+      <Border x:Name="Sample10" Style="{StaticResource Phiale.Design.Style.Badge.Danger}" Margin="4"><TextBlock Text="Badge.Danger" Style="{StaticResource Phiale.Design.Style.Badge.Danger.Text}" /></Border>
+      <Border Style="{StaticResource Phiale.Design.Style.Badge.Danger}" Margin="4"><TextBlock x:Name="Sample11" Style="{StaticResource Phiale.Design.Style.Badge.Danger.Text}" Margin="4" Text="Badge.Danger.Text"></TextBlock></Border>
+      <Border x:Name="Sample12" Style="{StaticResource Phiale.Design.Style.Badge.Warning}" Margin="4"><TextBlock Text="Badge.Warning" Style="{StaticResource Phiale.Design.Style.Badge.Warning.Text}" /></Border>
+      <Border Style="{StaticResource Phiale.Design.Style.Badge.Warning}" Margin="4"><TextBlock x:Name="Sample13" Style="{StaticResource Phiale.Design.Style.Badge.Warning.Text}" Margin="4" Text="Badge.Warning.Text"></TextBlock></Border>
+      <Button x:Name="Sample14" Style="{StaticResource Phiale.Design.Style.Button.Secondary}" Margin="4" Content="Button.Secondary"></Button>
+      <Button x:Name="Sample15" Style="{StaticResource Phiale.Design.Style.Button.Primary}" Margin="4" Content="Button.Primary"></Button>
+      <Button x:Name="Sample16" Style="{StaticResource Phiale.Design.Style.Button.Danger}" Margin="4" Content="Button.Danger"></Button>
+      <Button x:Name="Sample17" Style="{StaticResource Phiale.Design.Style.Button.Tertiary}" Margin="4" Content="Button.Tertiary"></Button>
+      <ToggleButton x:Name="Sample18" Style="{StaticResource Phiale.Design.Style.ToggleButton}" Margin="4" Content="ToggleButton"></ToggleButton>
+      <TextBox x:Name="Sample19" Style="{StaticResource Phiale.Design.Style.TextBox}" Margin="4" Text="draft"></TextBox>
+      <ComboBox x:Name="Sample20" Style="{StaticResource Phiale.Design.Style.ComboBox}" Margin="4" SelectedIndex="0"><ComboBoxItem Content="first" /><ComboBoxItem Content="second" /></ComboBox>
+      <ScrollBar x:Name="Sample21" Style="{StaticResource Phiale.Design.Style.ScrollBar}" Margin="4" Orientation="Horizontal" Minimum="0" Maximum="100" Value="25" ViewportSize="20" Width="180" Height="18"></ScrollBar>
+    </StackPanel></Border>
+    <StackPanel x:Name="OtherScope" Grid.Column="1" design:ThemeScope.Mode="Dark"><Button x:Name="OtherButton" Style="{StaticResource Phiale.Design.Style.Button.Primary}" Content="Independent dark" /></StackPanel>
+    <StackPanel x:Name="OverrideScope" Grid.Column="2" design:ThemeScope.Mode="Light"><StackPanel.Resources>
+      <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Light" Color="Orange" />
+    </StackPanel.Resources><Button x:Name="OverrideButton" Style="{StaticResource Phiale.Design.Style.Button.Primary}" Content="Local override" /></StackPanel>
+    </Grid>
+  </StackPanel>
+</Window>
+

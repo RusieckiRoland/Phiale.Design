@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <PackageId>Phiale.Design.Avalonia</PackageId>
+    <Version>0.1.0-preview.9</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Roland Rusiecki</Authors>
+    <Description>Phiale shared visual roles for Avalonia.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <PackageReference Include="Avalonia" Version="11.3.7" />
+    <AvaloniaResource Include="Themes/Palette.axaml" />
+    <AvaloniaResource Include="Themes/Controls.axaml" />
+  </ItemGroup>
+  <Target Name="GenerateDesignPalette" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet build &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/Phiale.Design.Generator.csproj&quot; --configuration Release -p:BaseIntermediateOutputPath=obj/Avalonia/ -p:BaseOutputPath=bin/Avalonia/ --nologo -v:q" />
+    <Exec Command="dotnet &quot;$(MSBuildThisFileDirectory)../../../tools/Phiale.Design.Generator/bin/Avalonia/Release/net8.0/Phiale.Design.Generator.dll&quot; Avalonia &quot;$(MSBuildThisFileDirectory)../../../Tokens/design.candidate.json&quot; &quot;$(MSBuildThisFileDirectory)Themes/Palette.axaml&quot;" />
+  </Target>
+</Project>

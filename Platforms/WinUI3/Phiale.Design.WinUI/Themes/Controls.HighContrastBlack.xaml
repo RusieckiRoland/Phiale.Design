@@ -1,0 +1,40 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ResourceDictionary.MergedDictionaries><ResourceDictionary Source="ms-appx:///Phiale.Design.WinUI/Themes/Controls.xaml"/><ResourceDictionary Source="ms-appx:///Phiale.Design.WinUI/Themes/HighContrastBlack.xaml"/></ResourceDictionary.MergedDictionaries>
+<Style x:Key="Phiale.Design.Style.Text.Body.HighContrastBlack" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Body}">
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Text.Secondary.HighContrastBlack" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Secondary}">
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Secondary.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Text.Caption.HighContrastBlack" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Caption}">
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Secondary.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Surface.Card.HighContrastBlack" TargetType="Border" BasedOn="{StaticResource Phiale.Design.Style.Surface.Card}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Surface.Base.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Subtle.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Button.Primary.HighContrastBlack" TargetType="Button" BasedOn="{StaticResource Phiale.Design.Style.Button.Primary}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Accent.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Accent.HighContrastBlack}"/>
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Inverse.HighContrastBlack}"/>
+<Setter Property="FocusVisualPrimaryBrush" Value="{StaticResource Phiale.Design.Brush.Focus.Ring.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Button.Secondary.HighContrastBlack" TargetType="Button" BasedOn="{StaticResource Phiale.Design.Style.Button.Secondary}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Surface.Base.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Default.HighContrastBlack}"/>
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
+<Setter Property="FocusVisualPrimaryBrush" Value="{StaticResource Phiale.Design.Brush.Focus.Ring.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.Button.Tertiary.HighContrastBlack" TargetType="Button" BasedOn="{StaticResource Phiale.Design.Style.Button.Tertiary}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Surface.Base.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Subtle.HighContrastBlack}"/>
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
+<Setter Property="FocusVisualPrimaryBrush" Value="{StaticResource Phiale.Design.Brush.Focus.Ring.HighContrastBlack}"/>
+</Style>
+<Style x:Key="Phiale.Design.Style.TextBox.HighContrastBlack" TargetType="TextBox" BasedOn="{StaticResource Phiale.Design.Style.TextBox}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Surface.Base.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Default.HighContrastBlack}"/>
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
+<Setter Property="SelectionHighlightColor" Value="{StaticResource Phiale.Design.Brush.Selection.Active.Fill.HighContrastBlack}"/>
+</Style>
+</ResourceDictionary>

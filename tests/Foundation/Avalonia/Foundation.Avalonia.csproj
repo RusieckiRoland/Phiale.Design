@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0</TargetFramework><Nullable>enable</Nullable><IsPackable>false</IsPackable></PropertyGroup><ItemGroup>
+<PackageReference Include="Avalonia" Version="11.3.7" /><PackageReference Include="Avalonia.Desktop" Version="11.3.7" /><PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.7" />
+<ProjectReference Condition="'$(DesignUsePackages)' != 'true'" Include="../../../Platforms/Avalonia/Phiale.Design.Avalonia/Phiale.Design.Avalonia.csproj" />
+<PackageReference Condition="'$(DesignUsePackages)' == 'true'" Include="Phiale.Design.Avalonia" Version="0.1.0-preview.9" />
+</ItemGroup></Project>
+

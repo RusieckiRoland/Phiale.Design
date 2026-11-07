@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="clr-namespace:Phiale.Design.Avalonia;assembly=Phiale.Design.Avalonia">
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent" Color="#2F80ED" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong" Color="#1D4ED8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent" Color="#2F80ED" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Default" Color="#D3D9E1" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Strong" Color="#A9B5C8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Subtle" Color="#E4E7EC" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Border" Color="#DC2626" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Fill" Color="#FEECEC" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Text" Color="#8B1D1D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Focus.Ring" Color="#2F80ED" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Hover.Fill" Color="#EAF2FF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Fill" Color="#D7E8FF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Text" Color="#10253F" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Base" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Page" Color="#F0F3F7" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Secondary" Color="#F8FAFC" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Tertiary" Color="#F0F3F7" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Inverse" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Muted" Color="#5B6572" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Primary" Color="#1F2937" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Secondary" Color="#4B5563" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Warning.Border" Color="#F59E0B" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent" Color="#DDECFB" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent.Subtle" Color="#E9F1FB" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Active" Color="#EFF6FF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Header" Color="#EAF0F7" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Inset" Color="#F3F6F9" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent" Color="#183B63" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent.Secondary" Color="#24496F" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Active" Color="#93C5FD" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Fill" Color="#FFF8E8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Header.Fill" Color="#F2DFB7" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border" Color="#B68C42" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border.Subtle" Color="#E9D8B6" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text" Color="#765019" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text.Strong" Color="#44351F" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Fill" Color="#FBD5D5" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Border" Color="#B91C1C" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill" Color="#E1E1E1" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text" Color="#A3A3A3" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border" Color="#E1E1E1" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Track" Color="#E9EEF5" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb" Color="#BCC8D9" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Hover" Color="#94A6BE" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast" Color="#1F2937" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow" Color="#140F172A" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent" Color="#5D9FFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong" Color="#93C5FD" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent" Color="#5D9FFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Default" Color="#61779A" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Strong" Color="#5B6572" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Subtle" Color="#343C4B" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Border" Color="#DD6B74" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Fill" Color="#4A2528" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Text" Color="#FFD9DC" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Focus.Ring" Color="#93C5FD" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Hover.Fill" Color="#1E2D45" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Fill" Color="#274E7A" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Text" Color="#F8FAFC" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Base" Color="#171C25" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Page" Color="#171C25" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Secondary" Color="#1E232D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Tertiary" Color="#242B36" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Inverse" Color="#171C25" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Muted" Color="#A9B5C8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Primary" Color="#F4F6FA" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Secondary" Color="#D3D9E1" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Warning.Border" Color="#B68C42" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent" Color="#1E232D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent.Subtle" Color="#242B36" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Active" Color="#274E7A" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Header" Color="#1E232D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Inset" Color="#1E232D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent" Color="#F4F6FA" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent.Secondary" Color="#F4F6FA" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Active" Color="#5D9FFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Fill" Color="#3B3221" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Header.Fill" Color="#44351F" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border" Color="#B68C42" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border.Subtle" Color="#765019" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text" Color="#F4C979" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text.Strong" Color="#FFF8E8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Fill" Color="#4A2528" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Border" Color="#DD6B74" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill" Color="#242B36" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text" Color="#A9B5C8" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border" Color="#343C4B" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Track" Color="#1E232D" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb" Color="#5B6572" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Hover" Color="#61779A" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast" Color="#F4F6FA" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast" Color="#171C25" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow" Color="#40000000" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="{x:Static design:DesignThemeVariants.HighContrast}">
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Default" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Strong" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Subtle" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Border" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Text" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Focus.Ring" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Hover.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Fill" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Selection.Active.Text" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Base" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Page" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Secondary" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Tertiary" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Inverse" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Muted" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Primary" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Secondary" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Warning.Border" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent.Subtle" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Active" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Header" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Inset" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent.Secondary" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Active" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Header.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Border.Subtle" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text.Strong" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Border" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Track" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Hover" Color="#FFFF00" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast" Color="#000000" />
+            <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow" Color="#FFFFFF" Opacity="0" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    <Color x:Key="Phiale.Design.Palette.Amber.10">#FFF8E8</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.20">#FDF6E3</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.25">#E9D8B6</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.30">#F2DFB7</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.32">#FFD882</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.35">#F4C979</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.38">#E7B04A</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.40">#F59E0B</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.50">#B68C42</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.60">#92400E</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.65">#765019</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.68">#44351F</Color>
+    <Color x:Key="Phiale.Design.Palette.Amber.70">#3B3221</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.10">#EFF6FF</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.100">#07101F</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.11">#EAF2FF</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.12">#E9F1FB</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.15">#DDECFB</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.20">#D7E8FF</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.30">#93C5FD</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.40">#5D9FFF</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.45">#5E8FC7</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.50">#2F80ED</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.52">#447DB4</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.55">#53779F</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.60">#1D4ED8</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.70">#274E7A</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.72">#24496F</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.75">#183B63</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.80">#1E2D45</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.90">#10253F</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.10">#FFFFFF</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.100">#171C25</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.110">#000000</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.15">#F8FAFC</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.20">#F4F6FA</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.30">#F0F3F7</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.40">#E4E7EC</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.42">#E1E1E1</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.50">#D3D9E1</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.60">#A9B5C8</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.62">#A3A3A3</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.65">#61779A</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.70">#5B6572</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.75">#4B5563</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.80">#343C4B</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.85">#242B36</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.90">#1F2937</Color>
+    <Color x:Key="Phiale.Design.Palette.Neutral.95">#1E232D</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.10">#FEECEC</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.15">#FBD5D5</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.20">#FFD9DC</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.25">#F08B95</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.30">#DD6B74</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.40">#DC2626</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.45">#B91C1C</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.50">#8B1D1D</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.60">#4A2528</Color>
+    <Color x:Key="Phiale.Design.Palette.Shadow.Dark">#40000000</Color>
+    <Color x:Key="Phiale.Design.Palette.Shadow.Light">#140F172A</Color>
+    <Color x:Key="Phiale.Design.Palette.Slate.10">#EAF0F7</Color>
+    <Color x:Key="Phiale.Design.Palette.Slate.20">#E9EEF5</Color>
+    <Color x:Key="Phiale.Design.Palette.Slate.40">#BCC8D9</Color>
+    <Color x:Key="Phiale.Design.Palette.Slate.5">#F3F6F9</Color>
+    <Color x:Key="Phiale.Design.Palette.Slate.60">#94A6BE</Color>
+    <Color x:Key="Phiale.Design.Palette.Teal.10">#B8DDD7</Color>
+    <Color x:Key="Phiale.Design.Palette.Teal.20">#0F766E</Color>
+    <Color x:Key="Phiale.Design.Palette.Teal.30">#0A655E</Color>
+    <Color x:Key="Phiale.Design.Palette.Teal.40">#095A54</Color>
+    <FontFamily x:Key="Phiale.Design.Text.Body.FontFamily">Segoe UI</FontFamily>
+    <x:Double x:Key="Phiale.Design.Opacity.Disabled">0.6</x:Double>
+    <CornerRadius x:Key="Phiale.Design.Radius.Medium">6</CornerRadius>
+    <x:Double x:Key="Phiale.Design.Size.Border.Stroke">1</x:Double>
+    <x:Double x:Key="Phiale.Design.Size.Focus.Stroke">2</x:Double>
+    <x:Double x:Key="Phiale.Design.Text.Body.FontSize">14</x:Double>
+    <FontWeight x:Key="Phiale.Design.Text.Body.FontWeight">Normal</FontWeight>
+    <x:Double x:Key="Phiale.Design.Text.Body.LineHeight">20</x:Double>
+    <x:Double x:Key="Phiale.Design.Text.BodySmall.FontSize">13</x:Double>
+    <FontWeight x:Key="Phiale.Design.Text.Button.FontWeight">SemiBold</FontWeight>
+    <Thickness x:Key="Phiale.Design.Thickness.Border.Default">1</Thickness>
+    <x:Double x:Key="Phiale.Design.Internal.Size.Control.MinHeight">32</x:Double>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.Button.Padding">12,6</Thickness>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.TextInput.Padding">10,6</Thickness>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.Card.Padding">18</Thickness>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.Badge.Padding">8,3</Thickness>
+    <x:Double x:Key="Phiale.Design.Internal.Size.ScrollBar.Thickness">14</x:Double>
+    <x:Double x:Key="Phiale.Design.Internal.Opacity.Pressed">0.94</x:Double>
+    <x:Double x:Key="Phiale.Design.Internal.Size.CheckBox.Glyph">16</x:Double>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.CheckBox.Content.Margin">8,0,0,0</Thickness>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.Calendar.Cell.Margin">2</Thickness>
+</ResourceDictionary>

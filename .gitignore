@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/wsl_obj/
+**/.avalonia-build-tasks/
+.vs/
+.idea/
+artifacts/
+TestResults/
+*.user
+*.suo
