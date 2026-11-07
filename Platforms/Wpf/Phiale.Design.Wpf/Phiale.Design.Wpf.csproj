@@ -10,10 +10,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Roland Rusiecki</Authors>
-    <Description>Phiale shared visual roles for WPF.</Description>
+    <Description>Design tokens, Light, Dark, and HighContrast themes, and explicitly selected control styles for WPF.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE.md" Pack="true" PackagePath="/" />
     <Page Include="Themes/Palette.xaml" />
     <Page Include="Themes/HighContrastBlack.xaml" />
     <Page Include="Themes/Controls.xaml" />

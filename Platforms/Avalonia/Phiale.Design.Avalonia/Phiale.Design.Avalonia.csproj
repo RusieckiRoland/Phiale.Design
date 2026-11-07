@@ -7,10 +7,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Roland Rusiecki</Authors>
-    <Description>Phiale shared visual roles for Avalonia.</Description>
+    <Description>Design tokens, Light, Dark, and HighContrast themes, and explicitly selected control styles for Avalonia.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../../README.md" Pack="true" PackagePath="/" /><None Include="../../../LICENSE.md" Pack="true" PackagePath="/" />
     <PackageReference Include="Avalonia" Version="11.3.7" />
     <AvaloniaResource Include="Themes/Palette.axaml" />
     <AvaloniaResource Include="Themes/Controls.axaml" />

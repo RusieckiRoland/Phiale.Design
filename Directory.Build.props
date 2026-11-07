@@ -1,5 +1,13 @@
 <Project>
   <PropertyGroup>
+    <PackageProjectUrl>https://neptuntech.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RusieckiRoland/Phiale.Design</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright (c) 2026 Roland Rusiecki</Copyright>
+    <PackageTags>Phiale;design-system;design-tokens;themes;styles;XAML;WPF;Avalonia;WinUI</PackageTags>
+    <PackageReleaseNotes>Initial public preview of Phiale.Design. Includes shared design tokens, Light, Dark, and HighContrast themes, and explicitly selected control styles. Preview APIs may change.</PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup>
     <DefaultItemExcludesInProjectFolder>$(DefaultItemExcludesInProjectFolder);bin/**;obj/**;wsl_obj/**</DefaultItemExcludesInProjectFolder>
   </PropertyGroup>
 </Project>

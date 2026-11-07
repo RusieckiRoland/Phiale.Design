@@ -108,4 +108,4 @@ guarantee identical pixel rendering or full WCAG compliance.
 
 ## License
 
-[MIT](LICENSE). Copyright (c) 2026 Roland Rusiecki.
+[MIT](LICENSE.md). Copyright (c) 2026 Roland Rusiecki.
