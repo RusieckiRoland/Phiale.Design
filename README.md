@@ -7,7 +7,7 @@ The libraries are independent of the applications and products that use them.
 | Package | Version | Platform |
 | --- | --- | --- |
 | Phiale.Design.Wpf | 0.1.0-preview.9 | net48, net8.0-windows10.0.19041.0 |
-| Phiale.Design.Avalonia | 0.1.0-preview.10-local.1 | net8.0, Avalonia 11.3.7 |
+| Phiale.Design.Avalonia | 0.1.0-preview.10 | net8.0, Avalonia 11.3.7 |
 | Phiale.Design.WinUI | 0.1.0-preview.11 | net8.0-windows10.0.19041.0, Windows App SDK 1.8 |
 
 Preview status: the public API may change. Building local packages does not
@@ -120,7 +120,7 @@ style override is required. Font assets and their notices remain in that package
 WPF and WinUI retain Segoe UI. The catalog records a platform-specific font
 value; generated palettes must not be edited independently.
 
-Local Avalonia version: `0.1.0-preview.10-local.1`, not published.
+Local Avalonia version: `0.1.0-preview.10`, not published.
 Build it with:
 
 ```powershell
@@ -137,3 +137,9 @@ WSL2, including real Inter glyph resolution. The consuming Shell passed 26/26
 Avalonia tests on both systems and native WSLg Workspace/legacy scenarios with
 the local package. Screenshots and performance limitations are recorded in the
 sibling Phiale.Shell repository at `docs/Done/Linux-Typografia.md`.
+
+## Version naming correction — 2026-11-08
+
+The author required ordinary preview versions instead of the agent's local suffix.
+Avalonia is now 0.1.0-preview.10; locality is represented by the feed directory.
+Existing history is preserved. This change does not itself publish the package.
