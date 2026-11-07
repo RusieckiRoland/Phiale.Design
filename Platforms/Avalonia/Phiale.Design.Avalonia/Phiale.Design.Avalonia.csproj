@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <PackageId>Phiale.Design.Avalonia</PackageId>
-    <Version>0.1.0-preview.10-local.1</Version>
+    <Version>0.1.0-preview.10</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Roland Rusiecki</Authors>
