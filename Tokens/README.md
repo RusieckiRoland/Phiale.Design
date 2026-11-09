@@ -1,7 +1,7 @@
 # Visual roles
 
 [design.candidate.json](design.candidate.json) is the source of the palette
-and metrics. It contains 69 primitive colors, 58 shared roles, and 10 private
+and metrics. It contains primitive colors, shared roles, and private
 metrics for the base control styles. [controls.contract.json](controls.contract.json)
 defines the explicit style keys. The generator in `tools/Phiale.Design.Generator`
 produces WPF, Avalonia, and WinUI resources when the libraries are built.
@@ -29,3 +29,16 @@ The shared `value` remains the default. Body font uses packaged Inter for
 Avalonia (`avares://Avalonia.Fonts.Inter/Assets#Inter`), Segoe UI for WPF/WinUI.
 The generator validates platform names and nonempty font values. This avoids
 relying on the system's substitute for a Windows-only font on Linux.
+
+## Tool-card roles
+
+The author requested promotion of the existing Grid tool-card appearance on
+2026-11-09. Public ToolCard metrics in design.candidate.json define the surface,
+header and toggle radii, header/action sizes, typography and spacing. WPF styles
+are listed in platformStyles.Wpf in controls.contract.json and loaded from
+Themes/ToolCards.xaml. Other platform style implementations have their own scope.
+
+`Surface.Workspace` identifies the continuous active work area, including its
+header and docked panes. It differs from the empty host's `Surface.Base` in
+Light and Dark. HighContrast follows Window, so clients distinguish the group
+with a system-colored outline rather than an invented background color.

@@ -37,4 +37,10 @@
 <Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
 <Setter Property="SelectionHighlightColor" Value="{StaticResource Phiale.Design.Brush.Selection.Active.Fill.HighContrastBlack}"/>
 </Style>
+<Style x:Key="Phiale.Design.Style.ComboBox.HighContrastBlack" TargetType="ComboBox" BasedOn="{StaticResource Phiale.Design.Style.ComboBox}">
+<Setter Property="Background" Value="{StaticResource Phiale.Design.Brush.Surface.Base.HighContrastBlack}"/>
+<Setter Property="BorderBrush" Value="{StaticResource Phiale.Design.Brush.Border.Default.HighContrastBlack}"/>
+<Setter Property="Foreground" Value="{StaticResource Phiale.Design.Brush.Text.Primary.HighContrastBlack}"/>
+<Setter Property="FocusVisualPrimaryBrush" Value="{StaticResource Phiale.Design.Brush.Focus.Ring.HighContrastBlack}"/>
+</Style>
 </ResourceDictionary>

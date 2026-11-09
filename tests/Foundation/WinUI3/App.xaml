@@ -2,7 +2,7 @@
   <Application.Resources><ResourceDictionary><ResourceDictionary.MergedDictionaries>
     <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
     <ResourceDictionary Source="ms-appx:///Phiale.Design.WinUI/Themes/Palette.xaml" />
-    <ResourceDictionary Source="ms-appx:///Phiale.Design.WinUI/Themes/Controls.xaml" />
+    <ResourceDictionary Source="ms-appx:///Phiale.Design.WinUI/Themes/Controls.HighContrastBlack.xaml" />
   </ResourceDictionary.MergedDictionaries></ResourceDictionary></Application.Resources>
 </Application>
 

@@ -24,6 +24,7 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Accent.Subtle.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Active.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Workspace.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Header.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Inset.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Text.Accent.HighContrast" Color="#FFFFFF" />

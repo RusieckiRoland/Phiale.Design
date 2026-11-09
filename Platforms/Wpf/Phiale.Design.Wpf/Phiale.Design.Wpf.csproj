@@ -6,7 +6,8 @@
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
     <Nullable>enable</Nullable>
     <PackageId>Phiale.Design.Wpf</PackageId>
-    <Version>0.1.0-preview.9</Version>
+    <Version>0.1.0-preview.19</Version>
+    <PackageReleaseNotes>Adds a semantic Workspace surface distinct from the empty host.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Roland Rusiecki</Authors>
@@ -17,6 +18,9 @@
     <Page Include="Themes/Palette.xaml" />
     <Page Include="Themes/HighContrastBlack.xaml" />
     <Page Include="Themes/Controls.xaml" />
+    <Page Include="Themes/ToolCards.xaml" />
+    <Page Include="Themes/Chevrons.xaml" />
+    <Page Include="Themes/CheckBoxes.xaml" />
   </ItemGroup>
   <Target Name="GenerateDesignPalette"
           BeforeTargets="DispatchToInnerBuilds;BeforeBuild"

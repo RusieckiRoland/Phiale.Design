@@ -100,6 +100,52 @@
         "key": "Phiale.Design.Style.Calendar",
         "targetType": "Calendar"
       }
+    ],
+    "Wpf": [
+      {
+        "key": "Phiale.Design.Style.ToolCard.Surface",
+        "targetType": "Border"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.Header",
+        "targetType": "Border"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.HeaderLayout",
+        "targetType": "DockPanel"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.Title",
+        "targetType": "TextBlock"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.DragGrip",
+        "targetType": "TextBlock"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.ActionButton",
+        "targetType": "Button"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.CloseButton",
+        "targetType": "Button"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.ToggleButton",
+        "targetType": "Button"
+      },
+      {
+        "key": "Phiale.Design.Style.ToolCard.Splitter",
+        "targetType": "Thumb"
+      },
+      {
+        "key": "Phiale.Design.Style.ChevronButton",
+        "targetType": "Button"
+      },
+      {
+        "key": "Phiale.Design.Style.CheckBox",
+        "targetType": "CheckBox"
+      }
     ]
   }
 }

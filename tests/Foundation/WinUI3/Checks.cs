@@ -76,6 +76,18 @@ public sealed partial class MainWindow : Window
             Require(sample.Style != null, "Missing explicit style " + i);
             if (sample is Control control) { control.ApplyTemplate(); Require(control.Template != null, "Missing template " + i); }
         }
+        var contrastStyle = (Style)Application.Current.Resources["Phiale.Design.Style.ComboBox.HighContrastBlack"];
+        var contrast = new ComboBox { Style = contrastStyle, RequestedTheme = ElementTheme.Dark };
+        contrast.Items.Add("contrast first"); contrast.Items.Add("contrast second"); contrast.SelectedIndex = 0;
+        OtherScope.Children.Add(contrast); await Flush();
+        Require(ColorOf(contrast.Background) == Colors.Black, "Explicit contrast ComboBox background is not black.");
+        Require(ColorOf(contrast.Foreground) == Colors.White, "Explicit contrast ComboBox text is not white.");
+        Require(ColorOf(contrast.BorderBrush) == Colors.White, "Explicit contrast ComboBox border is not white.");
+        Require(ColorOf(contrast.FocusVisualPrimaryBrush) == Colors.Yellow, "Explicit contrast ComboBox focus is not yellow.");
+        contrast.IsDropDownOpen = true; await Flush(); Require(contrast.IsDropDownOpen, "Contrast dropdown did not open.");
+        contrast.SelectedIndex = 1; contrast.IsDropDownOpen = false;
+        Require(contrast.SelectedIndex == 1, "Contrast selection did not survive popup closure.");
+        OtherScope.Children.Remove(contrast);
         Require(hc || ColorOf(OverrideButton.Background) == Colors.Orange, "Local resource override missing.");
         var other = ColorOf(OtherButton.Background);
         foreach (var mode in new[] { ElementTheme.Light, ElementTheme.Dark })

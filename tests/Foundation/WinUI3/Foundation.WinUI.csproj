@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0-windows10.0.19041.0</TargetFramework><TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion><UseWinUI>true</UseWinUI><RuntimeIdentifier>win-x64</RuntimeIdentifier><PlatformTarget>x64</PlatformTarget><WindowsPackageType>None</WindowsPackageType><Nullable>enable</Nullable><IsPackable>false</IsPackable></PropertyGroup><ItemGroup>
 <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.250916003" />
 <ProjectReference Condition="'$(DesignUsePackages)' != 'true'" Include="../../../Platforms/WinUI3/Phiale.Design.WinUI/Phiale.Design.WinUI.csproj" />
-<PackageReference Condition="'$(DesignUsePackages)' == 'true'" Include="Phiale.Design.WinUI" Version="0.1.0-preview.11" />
+<PackageReference Condition="'$(DesignUsePackages)' == 'true'" Include="Phiale.Design.WinUI" Version="0.1.0-preview.12" />
 </ItemGroup></Project>
 

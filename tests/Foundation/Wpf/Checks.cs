@@ -94,6 +94,19 @@ public partial class MainWindow : Window
     }
     public async Task Check()
     {
+        await CheckToolCards();
+        await CheckSplitters();
+        await CheckChevrons();
+        await CheckCheckBoxes();
+        foreach (var mode in new[] { "Light", "Dark" }) {
+            var workspace = (SolidColorBrush)FindResource("Phiale.Design.Brush.Surface.Workspace." + mode);
+            var empty = (SolidColorBrush)FindResource("Phiale.Design.Brush.Surface.Base." + mode);
+            Require(workspace.Color != empty.Color, "Workspace and empty host must be distinct in " + mode);
+        }
+        Require(((SolidColorBrush)FindResource("Phiale.Design.Brush.Surface.Workspace.HighContrast")).Color == SystemColors.WindowColor,
+            "Workspace High Contrast must follow the current Windows background.");
+        Require((CornerRadius)FindResource("Phiale.Design.Radius.Medium") == new CornerRadius(5), "WPF medium radius must be 5 DIP.");
+        Require((Thickness)FindResource("Phiale.Design.Thickness.Border.Default") == new Thickness(1), "Default border must be 1 DIP.");
         Require(HostButton.Style == null && HostText.Style == null, "Import changed host styles.");
         for (var i = 0; i < 22; i++)
         {

@@ -70,7 +70,13 @@
     "Palette.Amber.65": "#765019",
     "Palette.Amber.68": "#44351F",
     "Palette.Shadow.Light": "#140F172A",
-    "Palette.Shadow.Dark": "#40000000"
+    "Palette.Shadow.Dark": "#40000000",
+    "Palette.Neutral.17": "#F5F6F8",
+    "Palette.Blue.22": "#E5EFFB",
+    "Palette.Blue.65": "#1E5799",
+    "Palette.Slate.85": "#243247",
+    "Palette.Slate.12": "#DDE3EA",
+    "Palette.Slate.8": "#ECEFF3"
   },
   "internalRoles": [
     {
@@ -130,7 +136,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.50"
+          "ref": "Palette.Blue.65"
         },
         "Dark": {
           "ref": "Palette.Blue.40"
@@ -150,7 +156,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.60"
+          "ref": "Palette.Blue.65"
         },
         "Dark": {
           "ref": "Palette.Blue.30"
@@ -170,7 +176,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.50"
+          "ref": "Palette.Blue.65"
         },
         "Dark": {
           "ref": "Palette.Blue.40"
@@ -228,7 +234,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.40"
+          "ref": "Palette.Slate.12"
         },
         "Dark": {
           "ref": "Palette.Neutral.80"
@@ -305,7 +311,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.50"
+          "ref": "Palette.Blue.65"
         },
         "Dark": {
           "ref": "Palette.Blue.30"
@@ -344,7 +350,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.20"
+          "ref": "Palette.Blue.22"
         },
         "Dark": {
           "ref": "Palette.Blue.70"
@@ -363,7 +369,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Blue.90"
+          "ref": "Palette.Slate.85"
         },
         "Dark": {
           "ref": "Palette.Neutral.15"
@@ -420,7 +426,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.15"
+          "ref": "Palette.Slate.8"
         },
         "Dark": {
           "ref": "Palette.Neutral.95"
@@ -496,7 +502,7 @@
       "kind": "brush",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.90"
+          "ref": "Palette.Slate.85"
         },
         "Dark": {
           "ref": "Palette.Neutral.20"
@@ -564,7 +570,10 @@
     {
       "key": "Phiale.Design.Radius.Medium",
       "kind": "cornerRadius",
-      "value": "6"
+      "value": "6",
+      "platformValues": {
+        "Wpf": "5"
+      }
     },
     {
       "key": "Phiale.Design.Size.Border.Stroke",
@@ -659,6 +668,27 @@
         },
         "Dark": {
           "ref": "Palette.Blue.70"
+        },
+        "HighContrast": {
+          "system": {
+            "Wpf": "Window",
+            "WinUI": "Window"
+          },
+          "fallback": "#000000"
+        }
+      }
+    },
+    {
+      "key": "Phiale.Design.Brush.Surface.Workspace",
+      "kind": "brush",
+      "description": "Continuous work area including its workspace header and docked panes; distinct from the empty host surface.",
+      "introduced": "2026-11-09",
+      "variants": {
+        "Light": {
+          "ref": "Palette.Slate.10"
+        },
+        "Dark": {
+          "ref": "Palette.Neutral.95"
         },
         "HighContrast": {
           "system": {
@@ -1131,6 +1161,202 @@
       },
       "description": "Color of a decorative elevation shadow, including alpha. Product styles own blur and offset. HighContrast sets brush opacity to zero; this role is not a border or focus indicator.",
       "introduced": "2026-11-07"
+    },
+    {
+      "key": "Phiale.Design.Radius.ToolCard.Surface",
+      "kind": "cornerRadius",
+      "value": "12",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Radius.ToolCard.Header",
+      "kind": "cornerRadius",
+      "value": "8",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Radius.ToolCard.ToggleButton",
+      "kind": "cornerRadius",
+      "value": "11",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Size.ToolCard.Header.Height",
+      "kind": "double",
+      "value": "34",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Size.ToolCard.ActionButton",
+      "kind": "double",
+      "value": "28",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Size.ToolCard.ToggleButton",
+      "kind": "double",
+      "value": "22",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Text.ToolCard.Title.FontSize",
+      "kind": "double",
+      "value": "13",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Text.ToolCard.Toggle.FontSize",
+      "kind": "double",
+      "value": "11",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Text.ToolCard.DragGrip.FontSize",
+      "kind": "double",
+      "value": "12",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ToolCard.Header.Padding",
+      "kind": "thickness",
+      "value": "8,0,8,0",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ToolCard.ActionButton.Padding",
+      "kind": "thickness",
+      "value": "6,2",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ToolCard.ActionButton.Margin",
+      "kind": "thickness",
+      "value": "8,0,6,0",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ToolCard.ToggleButton.Margin",
+      "kind": "thickness",
+      "value": "0,0,8,0",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ToolCard.DragGrip.Margin",
+      "kind": "thickness",
+      "value": "0,0,8,0",
+      "introduced": "2026-11-09",
+      "decision": "Author requested moving the existing Grid tool-card appearance into Phiale.Design."
+    },
+    {
+      "key": "Phiale.Design.Size.ToolCard.MinWidth",
+      "kind": "double",
+      "value": "200",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared splitter and non-overlapping tool-card headers."
+    },
+    {
+      "key": "Phiale.Design.Size.ToolCard.Splitter.Width",
+      "kind": "double",
+      "value": "12",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared splitter and non-overlapping tool-card headers."
+    },
+    {
+      "key": "Phiale.Design.Size.ChevronButton",
+      "kind": "double",
+      "value": "28",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared chevron disclosure pattern in Design and its Grid consumer."
+    },
+    {
+      "key": "Phiale.Design.Size.ChevronIcon",
+      "kind": "double",
+      "value": "12",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared chevron disclosure pattern in Design and its Grid consumer."
+    },
+    {
+      "key": "Phiale.Design.Size.ChevronStroke",
+      "kind": "double",
+      "value": "1.5",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared chevron disclosure pattern in Design and its Grid consumer."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.DockedGap",
+      "kind": "double",
+      "value": "0",
+      "introduced": "2026-11-09",
+      "decision": "Author approved adjoining Workspace panels with independent layout and splitter metrics."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.SplitterHitWidth",
+      "kind": "double",
+      "value": "8",
+      "introduced": "2026-11-09",
+      "decision": "Author approved adjoining Workspace panels with independent layout and splitter metrics."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.DrawerInset",
+      "kind": "double",
+      "value": "6",
+      "introduced": "2026-11-09",
+      "decision": "Author approved adjoining Workspace panels with independent layout and splitter metrics."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.TabGap",
+      "kind": "double",
+      "value": "4",
+      "introduced": "2026-11-09",
+      "decision": "Author approved adjoining Workspace panels with independent layout and splitter metrics."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.HeaderGap",
+      "kind": "double",
+      "value": "0",
+      "introduced": "2026-11-09",
+      "decision": "Author approved adjoining Workspace panels with independent layout and splitter metrics."
+    },
+    {
+      "key": "Phiale.Design.Size.Workspace.Gap",
+      "kind": "double",
+      "value": "6",
+      "introduced": "2026-11-09",
+      "decision": "Author requested compact WPF Workspace spacing of 4 to 6 DIP."
+    },
+    {
+      "key": "Phiale.Design.Thickness.Workspace.Content.Padding",
+      "kind": "thickness",
+      "value": "8",
+      "introduced": "2026-11-09",
+      "decision": "AI selected uniform container padding for the author-requested WPF Workspace composition."
+    },
+    {
+      "key": "Phiale.Design.Size.CheckBox",
+      "kind": "double",
+      "value": "16",
+      "introduced": "2026-11-09",
+      "decision": "Author requested a shared styled checkbox list for panel visibility."
+    },
+    {
+      "key": "Phiale.Design.Radius.CheckBox",
+      "kind": "cornerRadius",
+      "value": "3",
+      "introduced": "2026-11-09",
+      "decision": "Agent selected a compact checkbox shape for the author-requested visibility list."
     }
   ]
 }

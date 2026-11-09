@@ -1,0 +1,172 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="clr-namespace:Phiale.Design.Wpf">
+    <ResourceDictionary.MergedDictionaries><ResourceDictionary Source="Chevrons.xaml"/></ResourceDictionary.MergedDictionaries>
+    <Style x:Key="Phiale.Design.Style.ToolCard.ActionButton" BasedOn="{StaticResource Phiale.Design.Style.Button.Secondary}" TargetType="Button">
+        <Setter Property="MinWidth" Value="{DynamicResource Phiale.Design.Size.ToolCard.ActionButton}"/>
+        <Setter Property="Height" Value="{DynamicResource Phiale.Design.Size.ToolCard.ActionButton}"/>
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Thickness.ToolCard.ActionButton.Padding}"/>
+        <Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.ToolCard.ActionButton.Margin}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.CloseButton" BasedOn="{StaticResource Phiale.Design.Style.ToolCard.ActionButton}" TargetType="Button">
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.ToolCard.Title.FontSize}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Content" Value="×"/>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.ToggleButton" BasedOn="{StaticResource Phiale.Design.Style.ToolCard.ActionButton}" TargetType="Button">
+        <Setter Property="Width" Value="{DynamicResource Phiale.Design.Size.ToolCard.ToggleButton}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource Phiale.Design.Size.ToolCard.ToggleButton}"/>
+        <Setter Property="Height" Value="{DynamicResource Phiale.Design.Size.ToolCard.ToggleButton}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.ToolCard.ToggleButton.Margin}"/>
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.ToolCard.Toggle.FontSize}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" BorderThickness="1" CornerRadius="{DynamicResource Phiale.Design.Radius.ToolCard.ToggleButton}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Light}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Light}"/>
+                                <Style.Triggers>
+                                    <Trigger Property="design:ThemeScope.Mode" Value="HighContrast">
+                                        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.HighContrast}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.HighContrast}"/>
+                                    </Trigger>
+                                    <Trigger Property="design:ThemeScope.Mode" Value="Dark">
+                                        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Dark}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Dark}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.Surface" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Light}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Light}"/>
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.ToolCard.Surface}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Style.Triggers>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.HighContrast}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.HighContrast}"/>
+            </Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Dark}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Dark}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.Header" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Header.Light}"/>
+        <Setter Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.ToolCard.Header}"/>
+        <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Thickness.ToolCard.Header.Padding}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Style.Triggers>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Header.HighContrast}"/>
+            </Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Header.Dark}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.HeaderLayout" TargetType="DockPanel">
+        <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Size.ToolCard.Header.Height}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="SizeAll"/>
+        <Setter Property="ToolTip" Value="Drag region"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.Title" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.ToolCard.Title.FontSize}"/><Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Secondary.Light}"/>
+        <Style.Triggers>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Secondary.Dark}"/></Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Secondary.HighContrast}"/></Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.DragGrip" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Text" Value="⋮⋮"/><Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.ToolCard.DragGrip.FontSize}"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.ToolCard.DragGrip.Margin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.Light}"/>
+        <Style.Triggers>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.Dark}"/></Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.HighContrast}"/></Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="Phiale.Design.Style.ToolCard.Splitter" TargetType="Thumb">
+        <Setter Property="Width" Value="{DynamicResource Phiale.Design.Size.ToolCard.Splitter.Width}"/>
+        <Setter Property="Focusable" Value="True"/>
+        <Setter Property="Cursor" Value="SizeWE"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Light}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Light}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.Light}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="Track" Width="1" Margin="0,16" HorizontalAlignment="Center" Background="{TemplateBinding BorderBrush}"/>
+                        <Border x:Name="Grip" Width="10" Height="28" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                BorderThickness="{DynamicResource Phiale.Design.Thickness.Border.Default}"
+                                CornerRadius="{DynamicResource Phiale.Design.Radius.Medium}"
+                                Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <StackPanel x:Name="GripMarks" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Border Width="6" Height="2" Margin="0,0,0,3" CornerRadius="1" Background="{TemplateBinding Foreground}"/>
+                                <Border Width="6" Height="2" CornerRadius="1" Background="{TemplateBinding Foreground}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="design:SplitterVisual.IsIntegrated" Value="True">
+                            <Setter TargetName="Track" Property="Margin" Value="0"/>
+                            <Setter TargetName="Grip" Property="Width" Value="6"/>
+                            <Setter TargetName="GripMarks" Property="LayoutTransform"><Setter.Value><ScaleTransform ScaleX="0.33"/></Setter.Value></Setter>
+                        </Trigger>
+                        <Trigger Property="design:SplitterVisual.Orientation" Value="Horizontal">
+                            <Setter TargetName="Track" Property="Width" Value="Auto"/>
+                            <Setter TargetName="Track" Property="Height" Value="1"/>
+                            <Setter TargetName="Track" Property="Margin" Value="16,0"/>
+                            <Setter TargetName="Track" Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter TargetName="Track" Property="VerticalAlignment" Value="Center"/>
+                            <Setter TargetName="Grip" Property="LayoutTransform"><Setter.Value><RotateTransform Angle="90"/></Setter.Value></Setter>
+                        </Trigger>
+                        <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:SplitterVisual.IsIntegrated" Value="True"/><Condition Property="design:SplitterVisual.Orientation" Value="Horizontal"/></MultiTrigger.Conditions>
+                            <Setter TargetName="Track" Property="Margin" Value="0"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="design:SplitterVisual.Orientation" Value="Horizontal">
+                <Setter Property="Width" Value="Auto"/>
+                <Setter Property="Height" Value="{DynamicResource Phiale.Design.Size.ToolCard.Splitter.Width}"/>
+                <Setter Property="Cursor" Value="SizeNS"/>
+            </Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.Dark}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Dark}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.Dark}"/>
+            </Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast">
+                <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Base.HighContrast}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.HighContrast}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Muted.HighContrast}"/>
+            </Trigger>
+            <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsKeyboardFocused" Value="True"/></MultiTrigger.Conditions><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.Light}"/></MultiTrigger>
+            <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsKeyboardFocused" Value="True"/></MultiTrigger.Conditions><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.Dark}"/></MultiTrigger>
+            <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsKeyboardFocused" Value="True"/></MultiTrigger.Conditions><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.HighContrast}"/></MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
