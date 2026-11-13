@@ -1,0 +1,29 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:design="clr-namespace:Phiale.Design.Wpf">
+    <GeometryGroup x:Key="Phiale.Design.Geometry.Options">
+        <EllipseGeometry Center="3,7" RadiusX="1" RadiusY="1"/>
+        <EllipseGeometry Center="7,7" RadiusX="1" RadiusY="1"/>
+        <EllipseGeometry Center="11,7" RadiusX="1" RadiusY="1"/>
+    </GeometryGroup>
+    <Style x:Key="Phiale.Design.Style.OptionsGlyph" TargetType="ContentControl">
+        <Setter Property="Width" Value="{DynamicResource Phiale.Design.Size.DisclosureGlyph}"/>
+        <Setter Property="Height" Value="{DynamicResource Phiale.Design.Size.DisclosureGlyph}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsHitTestVisible" Value="False"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Light}"/>
+        <Setter Property="Template"><Setter.Value>
+            <ControlTemplate TargetType="ContentControl">
+                <Viewbox Stretch="Uniform"><Canvas Width="14" Height="14">
+                    <Path x:Name="OptionsDots" Data="{StaticResource Phiale.Design.Geometry.Options}" Fill="{TemplateBinding Foreground}"/>
+                </Canvas></Viewbox>
+            </ControlTemplate>
+        </Setter.Value></Setter>
+        <Style.Triggers>
+            <Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Dark}"/></Trigger>
+            <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.HighContrast}"/></Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

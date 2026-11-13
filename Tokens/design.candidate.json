@@ -2,6 +2,19 @@
   "schemaVersion": 3,
   "status": "preview; public API subject to change",
   "primitives": {
+    "Palette.Blue.66": "#2866A7",
+    "Palette.Green.55": "#2E9468",
+    "Palette.Red.42": "#C74747",
+    "Palette.Blue.67": "#2C6DB1",
+
+    "Palette.Orange.10": "#FFF2E5",
+    "Palette.Orange.60": "#BA5C30",
+    "Palette.Orange.90": "#3B2A1C",
+    "Palette.Green.10": "#E8F7ED",
+    "Palette.Green.50": "#408752",
+    "Palette.Green.90": "#17382C",
+    "Palette.Green.60": "#18794E",
+    "Palette.Green.30": "#73D6A0",
     "Palette.Blue.10": "#EFF6FF",
     "Palette.Blue.20": "#D7E8FF",
     "Palette.Blue.30": "#93C5FD",
@@ -105,6 +118,11 @@
       "value": "8,3"
     },
     {
+      "key": "Phiale.Design.Internal.Thickness.ScrollBar.Thumb.Padding",
+      "kind": "thickness",
+      "value": "2"
+    },
+    {
       "key": "Phiale.Design.Internal.Size.ScrollBar.Thickness",
       "kind": "double",
       "value": "14"
@@ -131,6 +149,20 @@
     }
   ],
   "roles": [
+    {"key": "Phiale.Design.Brush.Notification.Warning.Fill", "kind": "brush", "description": "Figma 81:314 warning panel; Dark approved by author 2026-11-12.", "variants": {"Light": {"ref": "Palette.Orange.10"}, "Dark": {"ref": "Palette.Orange.90"}, "HighContrast": {"system": "Window", "fallback": "#000000"}}},
+    {"key": "Phiale.Design.Brush.Notification.Warning.Border", "kind": "brush", "description": "Notification border specialization; preserves existing generic Warning.Border.", "variants": {"Light": {"ref": "Palette.Orange.60"}, "Dark": {"ref": "Palette.Amber.50"}, "HighContrast": {"system": "WindowText", "fallback": "#FFFFFF"}}},
+    {"key":"Phiale.Design.Thickness.Notification.Padding","kind":"thickness","value":"16,12","introduced":"2026-11-12","decision":"Figma 81:156 registry success notification, inspected after author correction."},
+    {"key": "Phiale.Design.Brush.Success.Fill", "kind": "brush", "description": "Registry success notification. Light: approved Figma 81:156; Dark: author approved 2026-11-12.", "variants": {"Light": {"ref": "Palette.Green.10"}, "Dark": {"ref": "Palette.Green.90"}, "HighContrast": {"system": "Window", "fallback": "#000000"}}},
+    {"key": "Phiale.Design.Brush.Success.Border", "kind": "brush", "description": "Paired notification border; High Contrast follows current Windows palette.", "variants": {"Light": {"ref": "Palette.Green.50"}, "Dark": {"ref": "Palette.Green.30"}, "HighContrast": {"system": "WindowText", "fallback": "#FFFFFF"}}},
+    {
+      "key": "Phiale.Design.Brush.Success.Text",
+      "kind": "brush",
+      "variants": {
+        "Light": { "ref": "Palette.Green.60" },
+        "Dark": { "ref": "Palette.Green.30" },
+        "HighContrast": { "system": "WindowText", "fallback": "#FFFFFF" }
+      }
+    },
     {
       "key": "Phiale.Design.Brush.Accent",
       "kind": "brush",
@@ -554,6 +586,23 @@
         }
       }
     },
+    {"key": "Phiale.Design.Thickness.Form.InlineAction.Margin", "kind": "thickness", "value": "0,0,12,8", "introduced": "2026-11-12", "decision": "Task 020 V03: centralize existing form spacing in Design; no visual value or palette change."},
+    {"key": "Phiale.Design.Thickness.Form.AddressLink.Margin", "kind": "thickness", "value": "0,16,0,0", "introduced": "2026-11-12", "decision": "Task 020 V03: centralize existing form spacing in Design; no visual value or palette change."},
+    {"key": "Phiale.Design.Thickness.Form.NavigatorHelp.Margin", "kind": "thickness", "value": "16,12", "introduced": "2026-11-12", "decision": "Task 020 V03: centralize existing form spacing in Design; no visual value or palette change."},
+    {"key": "Phiale.Design.Thickness.Form.NavigatorSummary.Margin", "kind": "thickness", "value": "16", "introduced": "2026-11-12", "decision": "Task 020 V03: centralize existing form spacing in Design; no visual value or palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Action.Margin", "kind": "thickness", "value": "0,0,12,0", "introduced": "2026-11-12", "decision": "Task 020 V03: centralize existing form spacing in Design; no visual value or palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Section.Margin", "kind": "thickness", "value": "0,0,0,32", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Label.Margin", "kind": "thickness", "value": "0,0,0,8", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Heading.Margin", "kind": "thickness", "value": "0,0,0,16", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Help.Margin", "kind": "thickness", "value": "0,8,0,12", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Choice.Margin", "kind": "thickness", "value": "0,0,24,8", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Actions.Padding", "kind": "thickness", "value": "24,12", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Thickness.Form.Actions.Border", "kind": "thickness", "value": "0,1,0,0", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Size.Form.Fields.Gap", "kind": "double", "value": "16", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    {"key": "Phiale.Design.Size.Form.MinimumFieldWidth", "kind": "double", "value": "180", "introduced": "2026-11-12", "decision": "Task 020 V03: shared form composition metrics derived from the inspected P/B/O references; no palette change."},
+    { "key": "Phiale.Design.Text.FormTitle.FontSize", "kind": "double", "value": "24", "introduced": "2026-11-11", "decision": "Task 019 V03 requests a shared 24 DIP semibold form heading." },
+    { "key": "Phiale.Design.Size.Form.FieldHeight", "kind": "double", "value": "44", "introduced": "2026-11-11", "decision": "Task 019 V03 permits a shared 40–48 DIP field role; AI chose 44 from that range." },
+    { "key": "Phiale.Design.Thickness.Form.Padding", "kind": "thickness", "value": "24", "introduced": "2026-11-11", "decision": "Task 019 requires symmetric form spacing using the existing 24 DIP scale." },
     {
       "key": "Phiale.Design.Text.Body.FontFamily",
       "kind": "fontFamily",
@@ -567,6 +616,10 @@
       "kind": "double",
       "value": "0.6"
     },
+    {"key": "Phiale.Design.Radius.Segmented.First", "kind": "cornerRadius", "value": "5,0,0,5", "platforms": ["Wpf"], "introduced": "2026-11-13", "decision": "Author requested joined segmented choices for client type and pane tabs; retain the approved 5 DIP WPF outer radius and 1 DIP border."},
+    {"key": "Phiale.Design.Radius.Segmented.Middle", "kind": "cornerRadius", "value": "0", "platforms": ["Wpf"], "introduced": "2026-11-13", "decision": "Author requested joined segmented choices for client type and pane tabs; retain the approved 5 DIP WPF outer radius and 1 DIP border."},
+    {"key": "Phiale.Design.Radius.Segmented.Last", "kind": "cornerRadius", "value": "0,5,5,0", "platforms": ["Wpf"], "introduced": "2026-11-13", "decision": "Author requested joined segmented choices for client type and pane tabs; retain the approved 5 DIP WPF outer radius and 1 DIP border."},
+    {"key": "Phiale.Design.Thickness.Segmented.JoinedBorder", "kind": "thickness", "value": "0,1,1,1", "platforms": ["Wpf"], "introduced": "2026-11-13", "decision": "Author requested joined segmented choices for client type and pane tabs; retain the approved 5 DIP WPF outer radius and 1 DIP border."},
     {
       "key": "Phiale.Design.Radius.Medium",
       "kind": "cornerRadius",
@@ -979,10 +1032,10 @@
       "introduced": "2026-11-06",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.42"
+          "ref": "Palette.Slate.20"
         },
         "Dark": {
-          "ref": "Palette.Neutral.85"
+          "ref": "Palette.Neutral.90"
         },
         "HighContrast": {
           "system": {
@@ -1000,10 +1053,10 @@
       "introduced": "2026-11-06",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.62"
+          "ref": "Palette.Neutral.75"
         },
         "Dark": {
-          "ref": "Palette.Neutral.60"
+          "ref": "Palette.Neutral.50"
         },
         "HighContrast": {
           "system": {
@@ -1021,7 +1074,7 @@
       "introduced": "2026-11-06",
       "variants": {
         "Light": {
-          "ref": "Palette.Neutral.42"
+          "ref": "Palette.Slate.40"
         },
         "Dark": {
           "ref": "Palette.Neutral.80"
@@ -1296,6 +1349,62 @@
       "decision": "Author requested a shared chevron disclosure pattern in Design and its Grid consumer."
     },
     {
+      "key": "Phiale.Design.Radius.Panel.Surface",
+      "kind": "cornerRadius",
+      "value": "5",
+      "introduced": "2026-11-10",
+      "decision": "Author requested rounded panels and splitters following the supplied editor screenshot. Agent retained the approved 5 DIP radius."
+    },
+    {
+      "key": "Phiale.Design.Radius.Panel.Header",
+      "kind": "cornerRadius",
+      "value": "5,5,0,0",
+      "introduced": "2026-11-10",
+      "decision": "Agent matched the panel's upper corners while keeping its internal header separator straight."
+    },
+    {
+      "key": "Phiale.Design.Size.Panel.Gap",
+      "kind": "double",
+      "value": "4",
+      "introduced": "2026-11-10",
+      "decision": "Agent selected a compact 4 DIP panel separation from the author's screenshot."
+    },
+    {
+      "key": "Phiale.Design.Size.Panel.SplitterIndicator",
+      "kind": "double",
+      "value": "2",
+      "introduced": "2026-11-10",
+      "decision": "Agent selected a 2 DIP highlighted resize indicator inside the existing 8 DIP hit target."
+    },
+    {
+      "key": "Phiale.Design.Size.ComboBox.DisclosureWidth",
+      "kind": "double",
+      "value": "24",
+      "introduced": "2026-11-10",
+      "decision": "Author approved naming the existing ComboBox arrow-column dimension without changing its value."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ComboBox.Content.Margin",
+      "kind": "thickness",
+      "value": "0,0,6,0",
+      "introduced": "2026-11-10",
+      "decision": "Author approved naming the existing 6 DIP text-to-chevron gap without changing its value."
+    },
+    {
+      "key": "Phiale.Design.Size.DisclosureGlyph",
+      "kind": "double",
+      "value": "14",
+      "introduced": "2026-11-10",
+      "decision": "Author approved naming the existing shared disclosure-glyph size without changing its value."
+    },
+    {
+      "key": "Phiale.Design.Thickness.ComboBox.Item.Padding",
+      "kind": "thickness",
+      "value": "10,7",
+      "introduced": "2026-11-10",
+      "decision": "Author approved naming the existing ComboBox item padding without changing its value."
+    },
+    {
       "key": "Phiale.Design.Size.Workspace.DockedGap",
       "kind": "double",
       "value": "0",
@@ -1357,6 +1466,14 @@
       "value": "3",
       "introduced": "2026-11-09",
       "decision": "Agent selected a compact checkbox shape for the author-requested visibility list."
-    }
+    },
+    {"key": "Phiale.Design.Brush.Action.Primary.Fill", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Blue.66"}, "Dark": {"ref": "Palette.Blue.40"}, "HighContrast": {"system": {"Wpf": "Highlight", "WinUI": "Highlight"}, "fallback": "#FFFF00"}}},
+    {"key": "Phiale.Design.Brush.Action.Primary.Text", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Neutral.10"}, "Dark": {"ref": "Palette.Neutral.100"}, "HighContrast": {"system": {"Wpf": "HighlightText", "WinUI": "HighlightText"}, "fallback": "#000000"}}},
+    {"key": "Phiale.Design.Brush.Status.Complete.Fill", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Green.55"}, "Dark": {"ref": "Palette.Green.30"}, "HighContrast": {"system": {"Wpf": "Highlight", "WinUI": "Highlight"}, "fallback": "#FFFF00"}}},
+    {"key": "Phiale.Design.Brush.Status.Complete.Text", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Neutral.10"}, "Dark": {"ref": "Palette.Neutral.100"}, "HighContrast": {"system": {"Wpf": "HighlightText", "WinUI": "HighlightText"}, "fallback": "#000000"}}},
+    {"key": "Phiale.Design.Brush.Status.Error.Fill", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Red.42"}, "Dark": {"ref": "Palette.Red.20"}, "HighContrast": {"system": {"Wpf": "WindowText", "WinUI": "WindowText"}, "fallback": "#FFFFFF"}}},
+    {"key": "Phiale.Design.Brush.Status.Error.Text", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Neutral.10"}, "Dark": {"ref": "Palette.Neutral.100"}, "HighContrast": {"system": {"Wpf": "Window", "WinUI": "Window"}, "fallback": "#000000"}}},
+    {"key": "Phiale.Design.Brush.Status.Current.Fill", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Blue.67"}, "Dark": {"ref": "Palette.Blue.40"}, "HighContrast": {"system": {"Wpf": "Highlight", "WinUI": "Highlight"}, "fallback": "#FFFF00"}}},
+    {"key": "Phiale.Design.Brush.Status.Current.Text", "kind": "brush", "description": "Semantic action/status pair; Figma P01 (54:2), localized WPF review 2026-11-12.", "variants": {"Light": {"ref": "Palette.Neutral.10"}, "Dark": {"ref": "Palette.Neutral.100"}, "HighContrast": {"system": {"Wpf": "HighlightText", "WinUI": "HighlightText"}, "fallback": "#000000"}}}
   ]
 }

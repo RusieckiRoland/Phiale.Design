@@ -1,4 +1,4 @@
-# Phiale.Design
+﻿# Phiale.Design
 
 A shared visual foundation for WPF, Avalonia, and WinUI 3: color roles,
 metrics, typography, and explicitly selected styles for basic controls.
@@ -6,7 +6,7 @@ The libraries are independent of the applications and products that use them.
 
 | Package | Version | Platform |
 | --- | --- | --- |
-| Phiale.Design.Wpf | 0.1.0-preview.19 | net48, net8.0-windows10.0.19041.0 |
+| Phiale.Design.Wpf | 0.1.0-preview.47 | net48, net8.0-windows10.0.19041.0 |
 | Phiale.Design.Avalonia | 0.1.0-preview.10 | net8.0, Avalonia 11.3.7 |
 | Phiale.Design.WinUI | 0.1.0-preview.12 | net8.0-windows10.0.19041.0, Windows App SDK 1.8 |
 
@@ -358,3 +358,213 @@ Package-based native WPF Foundation verification passed 426 checks on net8
 and net48, including the distinct work-area fill and system HighContrast
 mapping. Evidence: `artifacts/workspace-surface-net8` and
 `artifacts/workspace-surface-net48`. No package was published.
+
+
+## WPF ComboBox and profile disclosure glyphs
+
+On 2026-11-10 the author requested matching vector chevrons for WPF ComboBoxes
+and the Shell user panel, with Down for a closed list, Up for an open list
+and Right for collapsed hierarchical navigation. The AI agent added
+Themes/DisclosureGlyphs.xaml, imported by Controls.xaml. Shared Geometry.Chevron
+resources and Style.ChevronGlyph render a centered 14 DIP glyph with the existing
+1.5 DIP ChevronStroke token and a consumer-supplied semantic foreground.
+The ComboBox reserves a 24 DIP arrow column and 6 DIP text gap, including its
+editable variant. Existing theme colors, focus border and list styles remain.
+This WPF package change is versioned as 0.1.0-preview.20 for local consumption.
+Verification for this change used the local preview.20 NuGet package. The native
+WPF foundation hosts passed 426 checks on net8 and net48. Evidence is under
+artifacts/combobox-chevrons-*. The build reported two existing nullable warnings
+in tests/Foundation/Wpf/Checks.cs at line 54. Shell consumer tests passed 20 cases,
+including initial popup themes, shared glyphs, editing, focus and 96/144 DPI renders.
+These render scales do not establish a physical mixed-monitor DPI transfer result.
+
+## Rounded WPF panels and edge splitters
+
+On 2026-11-10 the author supplied an editor screenshot and requested rounded
+Shell panels and matching splitters in Phiale.Design. The AI agent chose a
+5 DIP radius, 4 DIP panel gap, existing 1 DIP outline and an 8 DIP transparent
+resize target with a 2 DIP accent indicator on hover, drag or keyboard focus.
+These values are an independent interpretation of the image. No editor source
+code was used. Import Themes/Panels.xaml and select Panel.Surface, Panel.Header
+and Panel.Splitter under the Phiale.Design.Style prefix. SplitterVisual.Orientation
+selects the vertical or horizontal form. High Contrast keeps a visible idle line.
+The consumer owns sizing, bounds, panel placement, commands and content.
+The WPF package version is 0.1.0-preview.21 for local consumption.
+The local preview.21 package passed 426 foundation checks on each WPF target,
+net8 and net48. Shell passed 72 selected WPF tests, including rounded-corner
+pixels at 96/144 DPI, transparent hit targets, indicator states and opaque
+resize command forwarding. Native Shell smoke tests passed four theme variants
+on both runtimes. Evidence is in artifacts/rounded-panels-* in Design and
+artifacts-temp/rounded-panels-* in Shell. The foundation host build retains
+two existing nullable warnings in Checks.cs at line 54.
+
+On 2026-11-10 the author clarified that the supplied splitter reference included
+a visible three-dot resize affordance. Version 0.1.0-preview.23 adds three
+2 DIP vector dots centered on the shared Panel.Splitter. The grip rotates
+for horizontal separators and stays visible at rest. A compact Workspace-colored
+backplate separates the dots from the highlighted resize line. The outer hit
+target remains transparent, with its existing bounds and native drag behavior.
+
+## WPF ComboBox popup consistency
+
+On 2026-11-10 the author required the existing Design rules to govern both
+the closed ComboBox and its popup, without new agent-selected visual values.
+The review found that the popup omitted Radius.Medium, its ScrollViewer did
+not apply the Design scrollbar style, and four spacing/glyph dimensions had
+no named tokens. The author explicitly approved naming the existing 24 DIP
+arrow column, 6 DIP text gap, 14 DIP glyph and 10,7 item padding unchanged.
+They are now Size.ComboBox.DisclosureWidth, Thickness.ComboBox.Content.Margin,
+Size.DisclosureGlyph and Thickness.ComboBox.Item.Padding under Phiale.Design.
+
+The popup uses the existing radius, border thickness, brushes and typography.
+Only its content is clipped inside the rounded outline by a geometry converter.
+The ScrollViewer retains its WPF scrolling behavior and explicitly consumes
+Phiale.Design.Style.ScrollBar with the existing scrollbar-thickness token.
+Both templates and their visual states remain in XAML. There is no separate
+approved whole-ComboBox hover rule in Design. That gap remains for an author
+decision. Existing focus and disabled-state rules remain authoritative.
+This change is packaged locally as Phiale.Design.Wpf 0.1.0-preview.29.
+Verification of preview.27 passed 426 checks on each native WPF foundation host,
+net8 and net48, and 26 targeted Shell WPF tests. Tests include actual Thumb
+scrolling, popup token changes, 14 DIP scrollbar width, initial/live themes,
+focus, selection pairs and 96/144 DPI corner renders. Standard Shell demo smoke
+passed all four theme variants on both runtimes. The popup ScrollViewer now
+has an explicit Design template because the system template/minimum imposed
+17 DIP despite the Design width token. Evidence is under artifacts/combobox-popup-*
+and Shell artifacts-temp/combobox-design-review and combobox-popup-native-*.
+Existing nullable warnings remain in the foundation test host Checks.cs line 54.
+On 2026-11-10 the author approved the proposed whole-ComboBox hover rule and
+required its implementation in Phiale.Design. For enabled WPF ComboBoxes,
+hover uses the current theme's Focus.Ring brush for the outline and chevron.
+Surface.Base remains the background, Text.Primary remains the text color,
+and the existing keyboard focus outline remains. This resolves the earlier
+whole-control hover-rule gap. The implementation is in the shared XAML style.
+The approved hover change passed 15 targeted WPF tests covering Light, Dark,
+HighContrast, pointer entry/exit, keyboard focus, disabled controls and popup
+regressions. The standard Shell demo was rebuilt and native profile/theme
+smoke tests passed on net8 and net48. Evidence is in Shell artifacts-temp/
+combobox-hover and combobox-hover-native-*.
+The author subsequently reported that hover was not visually apparent. A real
+pointer inspection showed that the profile menu initially focuses its ComboBox,
+so its outline already has Focus.Ring before pointer entry. The earlier forced
+IsMouseOver test did not cover this visual overlap. The author approved adding
+Hover.Fill for the whole control, explicitly including HighContrast after being
+informed that ControlLight/WindowText is not a guaranteed contrast pair.
+Version 0.1.0-preview.29 keeps Text.Primary and uses Focus.Ring for the outline
+and chevron. The popup stays on Surface.Base while its owner is hovered.
+Fifteen targeted WPF tests passed, including hover with pre-existing keyboard
+focus, pointer exit, disabled controls and independent popup background.
+Evidence is in Shell artifacts-temp/combobox-visible-hover/visible-hover-final.trx.
+
+## WPF form composition — 2026-11-12
+
+Task 020 uses `Themes/Forms.xaml` for generic form sections, labels, choices and a fixed action bar. Spacing is named in the token catalogue and follows the inspected references. Colors, fonts, radius and borders reuse existing roles; no palette changes. Local WPF package: `0.1.0-preview.32`; not published by this task.
+
+Task 020 final local package: `0.1.0-preview.33`; the remaining inline form spacing is named in Design tokens without changing its values. Not published.
+
+
+## WPF localized forms and semantic status roles — 2026-11-12
+
+The author's current request covers application button and FormNavigator colors
+with comparison to the author's Figma (54:2). The AI agent added paired
+Action.Primary, Status.Complete, Status.Error and Status.Current roles to the
+existing token catalogue and WPF palettes. Light fills use #2866A7, #2E9468,
+#C74747 and #2C6DB1 respectively, read from that reference. Dark uses existing
+primitives; Windows High Contrast uses dynamic system pairs. Existing sidebar
+palette, 5 DIP radius and 1 DIP border remain unchanged.
+
+Controls.xaml consumes Action.Primary for primary actions. Forms.xaml owns
+Form.ValidationSummary, including wrapping for longer translations. Consumer
+XAML references these styles; there is no palette or style creation in C#.
+Final local WPF package is 0.1.0-preview.36, built for net48/net8, not published.
+Verification and real WPF screenshots are documented in Phiale.Shell
+docs/Opinon/Lokalizacja-i-kolory-WPF.md. Actual OS High Contrast and 150%
+native screenshot acceptance remain outside the observed 96 DPI session.
+
+
+### WPF review corrections — 2026-11-12
+
+The author reported unreadable form selection and a square validation outline
+over rounded fields. Design WPF preview.38 keeps Form.Choice checked state
+on the existing Action.Primary paired colors. Hover does not erase selection.
+The shared TextBox style suppresses the default rectangular WPF validation
+adorner; the existing Danger.Border trigger colors its own rounded border.
+Validation/bindings remain active. Consumer WPF tests passed 35 cases, including
+all three choices and validation geometry across Light/Dark/HighContrast.
+No palette values, field geometry, other platforms or behavior were changed.
+Package is local only. FormNavigator consumes the same Design version.
+
+
+### WPF review — shared scrolling and disabled actions, 2026-11-12
+
+The author requested rounded, styleable scrolling and clearer disabled buttons.
+Design WPF preview.40 provides Style.ScrollViewer with both native scroll axes,
+using the shared ScrollBar. Track/thumb use Radius.Medium; the existing 2 DIP
+thumb inset is now Internal.Thickness.ScrollBar.Thumb.Padding. The existing
+14 DIP thickness and theme brush roles remain dynamic. The application and
+Grid consume this shared XAML template. No C# appearance assignments were added.
+Disabled.Fill/Text/Border use existing neutral primitives: Light #E9EEF5 /
+#4B5563 / #BCC8D9 and Dark #1F2937 / #D3D9E1 / #343C4B. Windows High Contrast
+retains Window/GrayText. No new hex colors were introduced into the palette.
+Consumer tests verify live theme/resource changes, scrolling commands, radius,
+width, inset, disabled hover stability and >=4.5:1 Light/Dark text contrast.
+Final local WPF package is 0.1.0-preview.40, not published.
+
+WPF local preview.41 adds explicit PasswordBox and Form.PasswordBox styles using existing input, radius and theme tokens. Author authorized the shared masked input for CEIDG settings on 2026-11-12; AI generated the style from this repository's existing text-input rules. No public package publication.
+
+Local WPF preview.42 adds Button.DangerOnHover, preserving neutral rest and the keyboard focus ring, with existing Danger hover tokens. Requested for the CEIDG delete-key action on 2026-11-12. No palette changes or public publication.
+
+Local WPF preview.43 adds Success.Fill / Success.Border and Notification.Success. Light values follow Figma 81:156; the author approved Dark #17382C with the existing green accent and dynamic Windows High Contrast on 2026-11-12. The AI implemented the roles and XAML style. No public publication.
+
+Local WPF preview.44 also adds Notification.Warning from Figma 81:314, with the author-approved dark variant and system High Contrast. Existing generic Warning.Border remains unchanged. No public publication.
+
+
+## WPF segmented choices — preview.45
+
+Author direction, 2026-11-12/13: joined choices for client types and reusable
+pane tabs. The agent implemented `Themes/SegmentedChoices.xaml`, imported by
+`Forms.xaml`. Use `Phiale.Design.Style.SegmentedChoice` on ToggleButton and
+`SegmentVisual.Position` (First/Middle/Last or Single). Selection is supplied
+by IsChecked; existing commands retain behavior. The shared ButtonBase template
+is `Phiale.Design.Template.SegmentedChoice` and accepts SegmentVisual.IsSelected.
+
+Visual appearance remains entirely in XAML. SegmentVisual only declares state
+properties. Outer corners follow the approved WPF 5 DIP geometry; joined borders
+avoid double separators. Colors reuse existing theme roles, including dynamic
+Windows High Contrast resources. No Avalonia or WinUI implementation was changed.
+Local package only, not published. WPF net48/net8 pack succeeded. The consuming
+Shell's 48 selected WPF form tests passed; native captures of Light, Dark and
+High Contrast were inspected (Shell artifacts-temp/segmented-choice and
+artifacts-temp/localization/captures/20261113T060947218Z-320a6fb4).
+
+
+## WPF options icon — 2026-11-13
+
+The author requested replacing the Grid hamburger with horizontal ellipsis and
+providing a general options icon in Design. The agent added
+`Phiale.Design.Geometry.Options` (three vector circles) and
+`Phiale.Design.Style.OptionsGlyph`, imported by Controls.xaml.
+The glyph uses the existing disclosure size and theme text roles; no font glyph,
+product command, or interaction behavior is embedded in it.
+WPF package preview.46 is built locally; no publication is authorized.
+
+## WPF checkbox availability — 2026-11-13
+
+The author requested clearer enabled/disabled options and a shared checkbox pattern.
+WPF preview.47 uses Disabled.Fill/Border/Text at full opacity, including checked
+disabled controls. Enabled controls retain Border.Strong and Text.Primary; hover,
+keyboard focus and selection retain their existing roles. No palette was changed.
+The agent implemented the XAML correction and native state checks. Grid consumers
+should derive checkbox styles from Phiale.Design.Style.CheckBox, without copying
+the template. Avalonia and WinUI styles remain unchanged.
+
+
+## Pre-push verification — 2026-11-14
+
+The author requested committing and pushing pending changes and approved the
+message `feat: unify WPF controls, segmented choices and panel styles`.
+The full WPF .NET 8 Foundation runner currently fails at
+`Checks.cs` / `Local resource override missing` (OverrideButton background).
+This is an open verification failure, not a passing full foundation review.
+No additional control behavior was changed during the publication request.
+The publication covers repository sources; it does not publish NuGet packages.

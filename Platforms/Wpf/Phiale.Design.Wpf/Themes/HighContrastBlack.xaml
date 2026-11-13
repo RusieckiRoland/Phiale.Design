@@ -1,4 +1,9 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Fill.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Border.HighContrast" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Fill.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Border.HighContrast" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Text.HighContrast" Color="#FFFFFF" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.HighContrast" Color="#FFFF00" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong.HighContrast" Color="#FFFF00" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent.HighContrast" Color="#FFFF00" />
@@ -47,4 +52,12 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast.HighContrast" Color="#FFFFFF" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast.HighContrast" Color="#000000" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow.HighContrast" Color="#FFFFFF" Opacity="0" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Fill.HighContrast" Color="#FFFF00" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Text.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Fill.HighContrast" Color="#FFFF00" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Text.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Fill.HighContrast" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Text.HighContrast" Color="#000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Fill.HighContrast" Color="#FFFF00" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Text.HighContrast" Color="#000000" />
 </ResourceDictionary>

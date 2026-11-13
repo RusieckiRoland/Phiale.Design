@@ -33,6 +33,16 @@ public partial class MainWindow
                 RequireBrush(row.BorderBrush, mode == "HighContrast" ? "Selection.Active.Text" : "Focus.Ring", mode);
                 checkbox.IsEnabled = false;
                 RequireBrush(checkbox.Foreground, "Disabled.Text", mode);
+                Require(checkbox.Opacity == 1, "Disabled checkbox must not be dimmed twice.");
+                RequireBrush(box.Background, "Disabled.Fill", mode);
+                RequireBrush(box.BorderBrush, "Disabled.Border", mode);
+                RequireBrush(mark.Stroke, "Disabled.Text", mode);
+                checkbox.IsChecked = false;
+                SetPointerOver(checkbox, true);
+                RequireBrush(box.Background, "Disabled.Fill", mode);
+                RequireBrush(box.BorderBrush, "Disabled.Border", mode);
+                Require(mark.Visibility == Visibility.Collapsed, "Disabled unchecked state.");
+                SetPointerOver(checkbox, false);
                 checkbox.IsEnabled = true; checkbox.IsChecked = false;
                 Require((string)checkbox.Content == "Inspector", "Checkbox preserves application content.");
                 window.Focus(); System.Windows.Input.Keyboard.ClearFocus();

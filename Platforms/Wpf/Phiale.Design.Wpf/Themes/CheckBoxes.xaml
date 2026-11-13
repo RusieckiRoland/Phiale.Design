@@ -28,11 +28,12 @@
                       StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
               </Canvas></Viewbox>
             </Border>
-            <ContentPresenter Grid.Column="1" Margin="8,0,0,0" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+            <ContentPresenter x:Name="Content" Grid.Column="1" Margin="8,0,0,0" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True"/>
           </Grid>
         </Border>
         <ControlTemplate.Triggers>
+          <Trigger Property="HasContent" Value="False"><Setter TargetName="Content" Property="Margin" Value="0"/></Trigger>
           <Trigger Property="IsChecked" Value="True"><Setter TargetName="Mark" Property="Visibility" Value="Visible"/></Trigger>
           <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter TargetName="Box" Property="BorderBrush" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/></Trigger>
           <MultiTrigger>
@@ -62,6 +63,24 @@
             <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsKeyboardFocused" Value="True"/></MultiTrigger.Conditions>
             <Setter TargetName="Row" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text.HighContrast}"/>
           </MultiTrigger>
+          <MultiTrigger>
+            <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
+            <Setter TargetName="Box" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill.Light}"/>
+            <Setter TargetName="Box" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border.Light}"/>
+            <Setter TargetName="Mark" Property="Stroke" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.Light}"/>
+          </MultiTrigger>
+          <MultiTrigger>
+            <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
+            <Setter TargetName="Box" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill.Dark}"/>
+            <Setter TargetName="Box" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border.Dark}"/>
+            <Setter TargetName="Mark" Property="Stroke" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.Dark}"/>
+          </MultiTrigger>
+          <MultiTrigger>
+            <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
+            <Setter TargetName="Box" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Disabled.Fill.HighContrast}"/>
+            <Setter TargetName="Box" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Disabled.Border.HighContrast}"/>
+            <Setter TargetName="Mark" Property="Stroke" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.HighContrast}"/>
+          </MultiTrigger>
         </ControlTemplate.Triggers>
       </ControlTemplate>
     </Setter.Value></Setter>
@@ -77,7 +96,7 @@
       <MultiTrigger>
         <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
         <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.Light}"/>
-        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}"/>
+        <Setter Property="Opacity" Value="1"/><Setter Property="Cursor" Value="Arrow"/>
       </MultiTrigger>
       <Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Dark}"/><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Strong.Dark}"/></Trigger>
       <MultiTrigger>
@@ -91,7 +110,7 @@
       <MultiTrigger>
         <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
         <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.Dark}"/>
-        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}"/>
+        <Setter Property="Opacity" Value="1"/><Setter Property="Cursor" Value="Arrow"/>
       </MultiTrigger>
       <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.HighContrast}"/><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Strong.HighContrast}"/></Trigger>
       <MultiTrigger>
@@ -107,7 +126,7 @@
       <MultiTrigger>
         <MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsEnabled" Value="False"/></MultiTrigger.Conditions>
         <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Disabled.Text.HighContrast}"/>
-        <Setter Property="Opacity" Value="{DynamicResource Phiale.Design.Opacity.Disabled}"/>
+        <Setter Property="Opacity" Value="1"/><Setter Property="Cursor" Value="Arrow"/>
       </MultiTrigger>
     </Style.Triggers>
   </Style>

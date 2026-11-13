@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Fill.Light" Color="#FFF2E5" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Border.Light" Color="#BA5C30" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Fill.Light" Color="#E8F7ED" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Border.Light" Color="#408752" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Text.Light" Color="#18794E" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Light" Color="#1E5799" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong.Light" Color="#1E5799" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent.Light" Color="#1E5799" />
@@ -39,15 +44,28 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text.Strong.Light" Color="#44351F" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Fill.Light" Color="#FBD5D5" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Border.Light" Color="#B91C1C" />
-    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill.Light" Color="#E1E1E1" />
-    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text.Light" Color="#A3A3A3" />
-    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border.Light" Color="#E1E1E1" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill.Light" Color="#E9EEF5" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text.Light" Color="#4B5563" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border.Light" Color="#BCC8D9" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Track.Light" Color="#E9EEF5" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Light" Color="#BCC8D9" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Hover.Light" Color="#94A6BE" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast.Light" Color="#1F2937" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast.Light" Color="#FFFFFF" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow.Light" Color="#140F172A" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Fill.Light" Color="#2866A7" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Text.Light" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Fill.Light" Color="#2E9468" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Text.Light" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Fill.Light" Color="#C74747" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Text.Light" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Fill.Light" Color="#2C6DB1" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Text.Light" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Fill.Dark" Color="#3B2A1C" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Border.Dark" Color="#B68C42" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Fill.Dark" Color="#17382C" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Border.Dark" Color="#73D6A0" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Text.Dark" Color="#73D6A0" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Dark" Color="#5D9FFF" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong.Dark" Color="#93C5FD" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent.Dark" Color="#5D9FFF" />
@@ -87,8 +105,8 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Summary.Text.Strong.Dark" Color="#FFF8E8" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Fill.Dark" Color="#4A2528" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Danger.Hover.Border.Dark" Color="#DD6B74" />
-    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill.Dark" Color="#242B36" />
-    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text.Dark" Color="#A9B5C8" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Fill.Dark" Color="#1F2937" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Text.Dark" Color="#D3D9E1" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Disabled.Border.Dark" Color="#343C4B" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Track.Dark" Color="#1E232D" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Scroll.Thumb.Dark" Color="#5B6572" />
@@ -96,6 +114,19 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast.Dark" Color="#F4F6FA" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast.Dark" Color="#171C25" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow.Dark" Color="#40000000" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Fill.Dark" Color="#5D9FFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Text.Dark" Color="#171C25" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Fill.Dark" Color="#73D6A0" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Text.Dark" Color="#171C25" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Fill.Dark" Color="#FFD9DC" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Text.Dark" Color="#171C25" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Fill.Dark" Color="#5D9FFF" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Text.Dark" Color="#171C25" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Notification.Warning.Border.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Border.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Success.Text.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Accent.Strong.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Border.Accent.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
@@ -144,6 +175,14 @@
     <SolidColorBrush x:Key="Phiale.Design.Brush.Surface.Contrast.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Text.OnContrast.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
     <SolidColorBrush x:Key="Phiale.Design.Brush.Shadow.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" Opacity="0" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Action.Primary.Text.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Complete.Text.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Error.Text.HighContrast" Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Fill.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
+    <SolidColorBrush x:Key="Phiale.Design.Brush.Status.Current.Text.HighContrast" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" />
     <Color x:Key="Phiale.Design.Palette.Amber.10">#FFF8E8</Color>
     <Color x:Key="Phiale.Design.Palette.Amber.20">#FDF6E3</Color>
     <Color x:Key="Phiale.Design.Palette.Amber.25">#E9D8B6</Color>
@@ -172,11 +211,19 @@
     <Color x:Key="Phiale.Design.Palette.Blue.55">#53779F</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.60">#1D4ED8</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.65">#1E5799</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.66">#2866A7</Color>
+    <Color x:Key="Phiale.Design.Palette.Blue.67">#2C6DB1</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.70">#274E7A</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.72">#24496F</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.75">#183B63</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.80">#1E2D45</Color>
     <Color x:Key="Phiale.Design.Palette.Blue.90">#10253F</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.10">#E8F7ED</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.30">#73D6A0</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.50">#408752</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.55">#2E9468</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.60">#18794E</Color>
+    <Color x:Key="Phiale.Design.Palette.Green.90">#17382C</Color>
     <Color x:Key="Phiale.Design.Palette.Neutral.10">#FFFFFF</Color>
     <Color x:Key="Phiale.Design.Palette.Neutral.100">#171C25</Color>
     <Color x:Key="Phiale.Design.Palette.Neutral.110">#000000</Color>
@@ -196,12 +243,16 @@
     <Color x:Key="Phiale.Design.Palette.Neutral.85">#242B36</Color>
     <Color x:Key="Phiale.Design.Palette.Neutral.90">#1F2937</Color>
     <Color x:Key="Phiale.Design.Palette.Neutral.95">#1E232D</Color>
+    <Color x:Key="Phiale.Design.Palette.Orange.10">#FFF2E5</Color>
+    <Color x:Key="Phiale.Design.Palette.Orange.60">#BA5C30</Color>
+    <Color x:Key="Phiale.Design.Palette.Orange.90">#3B2A1C</Color>
     <Color x:Key="Phiale.Design.Palette.Red.10">#FEECEC</Color>
     <Color x:Key="Phiale.Design.Palette.Red.15">#FBD5D5</Color>
     <Color x:Key="Phiale.Design.Palette.Red.20">#FFD9DC</Color>
     <Color x:Key="Phiale.Design.Palette.Red.25">#F08B95</Color>
     <Color x:Key="Phiale.Design.Palette.Red.30">#DD6B74</Color>
     <Color x:Key="Phiale.Design.Palette.Red.40">#DC2626</Color>
+    <Color x:Key="Phiale.Design.Palette.Red.42">#C74747</Color>
     <Color x:Key="Phiale.Design.Palette.Red.45">#B91C1C</Color>
     <Color x:Key="Phiale.Design.Palette.Red.50">#8B1D1D</Color>
     <Color x:Key="Phiale.Design.Palette.Red.60">#4A2528</Color>
@@ -219,8 +270,30 @@
     <Color x:Key="Phiale.Design.Palette.Teal.20">#0F766E</Color>
     <Color x:Key="Phiale.Design.Palette.Teal.30">#0A655E</Color>
     <Color x:Key="Phiale.Design.Palette.Teal.40">#095A54</Color>
+    <Thickness x:Key="Phiale.Design.Thickness.Notification.Padding">16,12</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.InlineAction.Margin">0,0,12,8</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.AddressLink.Margin">0,16,0,0</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.NavigatorHelp.Margin">16,12</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.NavigatorSummary.Margin">16</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Action.Margin">0,0,12,0</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Section.Margin">0,0,0,32</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Label.Margin">0,0,0,8</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Heading.Margin">0,0,0,16</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Help.Margin">0,8,0,12</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Choice.Margin">0,0,24,8</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Actions.Padding">24,12</Thickness>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Actions.Border">0,1,0,0</Thickness>
+    <sys:Double x:Key="Phiale.Design.Size.Form.Fields.Gap">16</sys:Double>
+    <sys:Double x:Key="Phiale.Design.Size.Form.MinimumFieldWidth">180</sys:Double>
+    <sys:Double x:Key="Phiale.Design.Text.FormTitle.FontSize">24</sys:Double>
+    <sys:Double x:Key="Phiale.Design.Size.Form.FieldHeight">44</sys:Double>
+    <Thickness x:Key="Phiale.Design.Thickness.Form.Padding">24</Thickness>
     <FontFamily x:Key="Phiale.Design.Text.Body.FontFamily">Segoe UI</FontFamily>
     <sys:Double x:Key="Phiale.Design.Opacity.Disabled">0.6</sys:Double>
+    <CornerRadius x:Key="Phiale.Design.Radius.Segmented.First">5,0,0,5</CornerRadius>
+    <CornerRadius x:Key="Phiale.Design.Radius.Segmented.Middle">0</CornerRadius>
+    <CornerRadius x:Key="Phiale.Design.Radius.Segmented.Last">0,5,5,0</CornerRadius>
+    <Thickness x:Key="Phiale.Design.Thickness.Segmented.JoinedBorder">0,1,1,1</Thickness>
     <CornerRadius x:Key="Phiale.Design.Radius.Medium">5</CornerRadius>
     <sys:Double x:Key="Phiale.Design.Size.Border.Stroke">1</sys:Double>
     <sys:Double x:Key="Phiale.Design.Size.Focus.Stroke">2</sys:Double>
@@ -249,6 +322,14 @@
     <sys:Double x:Key="Phiale.Design.Size.ChevronButton">28</sys:Double>
     <sys:Double x:Key="Phiale.Design.Size.ChevronIcon">12</sys:Double>
     <sys:Double x:Key="Phiale.Design.Size.ChevronStroke">1.5</sys:Double>
+    <CornerRadius x:Key="Phiale.Design.Radius.Panel.Surface">5</CornerRadius>
+    <CornerRadius x:Key="Phiale.Design.Radius.Panel.Header">5,5,0,0</CornerRadius>
+    <sys:Double x:Key="Phiale.Design.Size.Panel.Gap">4</sys:Double>
+    <sys:Double x:Key="Phiale.Design.Size.Panel.SplitterIndicator">2</sys:Double>
+    <sys:Double x:Key="Phiale.Design.Size.ComboBox.DisclosureWidth">24</sys:Double>
+    <Thickness x:Key="Phiale.Design.Thickness.ComboBox.Content.Margin">0,0,6,0</Thickness>
+    <sys:Double x:Key="Phiale.Design.Size.DisclosureGlyph">14</sys:Double>
+    <Thickness x:Key="Phiale.Design.Thickness.ComboBox.Item.Padding">10,7</Thickness>
     <sys:Double x:Key="Phiale.Design.Size.Workspace.DockedGap">0</sys:Double>
     <sys:Double x:Key="Phiale.Design.Size.Workspace.SplitterHitWidth">8</sys:Double>
     <sys:Double x:Key="Phiale.Design.Size.Workspace.DrawerInset">6</sys:Double>
@@ -263,6 +344,7 @@
     <Thickness x:Key="Phiale.Design.Internal.Thickness.TextInput.Padding">10,6</Thickness>
     <Thickness x:Key="Phiale.Design.Internal.Thickness.Card.Padding">18</Thickness>
     <Thickness x:Key="Phiale.Design.Internal.Thickness.Badge.Padding">8,3</Thickness>
+    <Thickness x:Key="Phiale.Design.Internal.Thickness.ScrollBar.Thumb.Padding">2</Thickness>
     <sys:Double x:Key="Phiale.Design.Internal.Size.ScrollBar.Thickness">14</sys:Double>
     <sys:Double x:Key="Phiale.Design.Internal.Opacity.Pressed">0.94</sys:Double>
     <sys:Double x:Key="Phiale.Design.Internal.Size.CheckBox.Glyph">16</sys:Double>

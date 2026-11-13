@@ -42,3 +42,27 @@ Themes/ToolCards.xaml. Other platform style implementations have their own scope
 header and docked panes. It differs from the empty host's `Surface.Base` in
 Light and Dark. HighContrast follows Window, so clients distinguish the group
 with a system-colored outline rather than an invented background color.
+
+## Success role — task 014 (2026-11-11)
+
+The author authorized adding Success.Text after the FormNavigator task exposed
+the missing completion role. The agent added Light/Dark green primitives and a
+WindowText system HighContrast mapping (static fallback white for the separately
+generated demo palette). WPF preview.30 contains the role. No basic control style
+was changed by this addition. This local package has not been published by task 014.
+
+### Shared form metrics for Shell Clients019 — 2026-11-11
+
+The author-requested task 019 V03/V05 requires a 24 DIP semibold form title,
+consistent fields in the 40–48 DIP range, and symmetric spacing using Design.
+The agent added Text.FormTitle.FontSize (24), Size.Form.FieldHeight (44, chosen
+within the specified range), and Thickness.Form.Padding (24, the existing scale).
+The catalogue generates these resources; WPF preview.31 is built to the local
+feed only. No palette, font-family or other-platform control styles changed.
+
+
+## WPF form composition — 2026-11-12
+
+Task 020 uses `Themes/Forms.xaml` for generic form sections, labels, choices and a fixed action bar. Spacing is named in the token catalogue and follows the inspected references. Colors, fonts, radius and borders reuse existing roles; no palette changes. Local WPF package: `0.1.0-preview.32`; not published by this task.
+
+Task 020 final local package: `0.1.0-preview.33`; the remaining inline form spacing is named in Design tokens without changing its values. Not published.

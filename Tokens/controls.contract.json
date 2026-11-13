@@ -143,6 +143,22 @@
         "targetType": "Button"
       },
       {
+        "key": "Phiale.Design.Style.ChevronGlyph",
+        "targetType": "ContentControl"
+      },
+      {
+        "key": "Phiale.Design.Style.Panel.Surface",
+        "targetType": "Border"
+      },
+      {
+        "key": "Phiale.Design.Style.Panel.Header",
+        "targetType": "Border"
+      },
+      {
+        "key": "Phiale.Design.Style.Panel.Splitter",
+        "targetType": "Thumb"
+      },
+      {
         "key": "Phiale.Design.Style.CheckBox",
         "targetType": "CheckBox"
       }

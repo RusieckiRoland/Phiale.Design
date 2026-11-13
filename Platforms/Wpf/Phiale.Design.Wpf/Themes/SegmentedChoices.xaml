@@ -1,0 +1,69 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="clr-namespace:Phiale.Design.Wpf">
+ <ResourceDictionary.MergedDictionaries><ResourceDictionary Source="Controls.xaml"/></ResourceDictionary.MergedDictionaries>
+ <ControlTemplate x:Key="Phiale.Design.Template.SegmentedChoice" TargetType="{x:Type ButtonBase}">
+  <Grid SnapsToDevicePixels="True">
+   <Border x:Name="SegmentSurface" Background="{DynamicResource Phiale.Design.Brush.Surface.Secondary.Light}" BorderBrush="{DynamicResource Phiale.Design.Brush.Border.Default.Light}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{DynamicResource Phiale.Design.Radius.Medium}">
+    <TextBlock x:Name="TabLabel" Text="{TemplateBinding Content}" Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource Phiale.Design.Brush.Text.Primary.Light}" TextTrimming="CharacterEllipsis"/>
+   </Border>
+   <Border x:Name="SegmentFocus" BorderBrush="{DynamicResource Phiale.Design.Brush.Focus.Ring.Light}" BorderThickness="{DynamicResource Phiale.Design.Thickness.Border.Default}" CornerRadius="{Binding CornerRadius, ElementName=SegmentSurface}" Visibility="Collapsed" IsHitTestVisible="False"/>
+  </Grid>
+  <ControlTemplate.Triggers>
+   <Trigger Property="design:SegmentVisual.Position" Value="First"><Setter TargetName="SegmentSurface" Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Segmented.First}"/></Trigger>
+   <Trigger Property="design:SegmentVisual.Position" Value="Middle"><Setter TargetName="SegmentSurface" Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Segmented.Middle}"/></Trigger>
+   <Trigger Property="design:SegmentVisual.Position" Value="Last"><Setter TargetName="SegmentSurface" Property="CornerRadius" Value="{DynamicResource Phiale.Design.Radius.Segmented.Last}"/></Trigger>
+   <Trigger Property="IsKeyboardFocusWithin" Value="True"><Setter TargetName="SegmentFocus" Property="Visibility" Value="Visible"/></Trigger>
+<Trigger Property="design:ThemeScope.Mode" Value="Light">
+      <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary.Light}"/>
+      <Setter TargetName="SegmentSurface" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default.Light}"/>
+      <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Light}"/>
+      <Setter TargetName="SegmentFocus" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.Light}"/>
+    </Trigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsMouseOver" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill.Light}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Light}"/>
+        </MultiTrigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="design:SegmentVisual.IsSelected" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.Light}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.Light}"/>
+        </MultiTrigger>
+<Trigger Property="design:ThemeScope.Mode" Value="Dark">
+      <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary.Dark}"/>
+      <Setter TargetName="SegmentSurface" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default.Dark}"/>
+      <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Dark}"/>
+      <Setter TargetName="SegmentFocus" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.Dark}"/>
+    </Trigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsMouseOver" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Hover.Fill.Dark}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.Dark}"/>
+        </MultiTrigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="design:SegmentVisual.IsSelected" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.Dark}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.Dark}"/>
+        </MultiTrigger>
+<Trigger Property="design:ThemeScope.Mode" Value="HighContrast">
+      <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Surface.Secondary.HighContrast}"/>
+      <Setter TargetName="SegmentSurface" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Default.HighContrast}"/>
+      <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Text.Primary.HighContrast}"/>
+      <Setter TargetName="SegmentFocus" Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Focus.Ring.HighContrast}"/>
+    </Trigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsMouseOver" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill.HighContrast}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text.HighContrast}"/>
+        </MultiTrigger>
+<MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="design:SegmentVisual.IsSelected" Value="True"/><Condition Property="IsEnabled" Value="True"/></MultiTrigger.Conditions>
+          <Setter TargetName="SegmentSurface" Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.HighContrast}"/>
+          <Setter TargetName="TabLabel" Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.HighContrast}"/>
+        </MultiTrigger>
+   <Trigger Property="IsEnabled" Value="False"><Setter TargetName="SegmentSurface" Property="Background" Value="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}"/><Setter TargetName="TabLabel" Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/></Trigger>
+  </ControlTemplate.Triggers>
+ </ControlTemplate>
+ <Style x:Key="Phiale.Design.Style.SegmentedChoice" TargetType="ToggleButton" BasedOn="{StaticResource Phiale.Design.Style.ToggleButton}">
+  <Setter Property="Template" Value="{StaticResource Phiale.Design.Template.SegmentedChoice}"/>
+  <Setter Property="design:SegmentVisual.IsSelected" Value="{Binding IsChecked, RelativeSource={RelativeSource Self}}"/>
+  <Setter Property="Margin" Value="0"/>
+  <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Internal.Thickness.Button.Padding}"/>
+  <Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}"/>
+  <Setter Property="SnapsToDevicePixels" Value="True"/><Setter Property="UseLayoutRounding" Value="True"/>
+  <Style.Triggers><Trigger Property="design:SegmentVisual.Position" Value="Middle"><Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Segmented.JoinedBorder}"/></Trigger><Trigger Property="design:SegmentVisual.Position" Value="Last"><Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Segmented.JoinedBorder}"/></Trigger><Trigger Property="design:SegmentVisual.Position" Value="First"><Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}"/></Trigger><Trigger Property="design:SegmentVisual.Position" Value="Single"><Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Border.Default}"/></Trigger></Style.Triggers>
+ </Style>
+</ResourceDictionary>

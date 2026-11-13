@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:design="clr-namespace:Phiale.Design.Wpf">
+ <ResourceDictionary.MergedDictionaries><ResourceDictionary Source="Controls.xaml"/><ResourceDictionary Source="SegmentedChoices.xaml"/></ResourceDictionary.MergedDictionaries>
+ <Style x:Key="Phiale.Design.Style.Form.Section" TargetType="StackPanel"><Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.Form.Section.Margin}"/></Style>
+ <Style x:Key="Phiale.Design.Style.Form.SectionTitle" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Body}"><Setter Property="FontWeight" Value="{DynamicResource Phiale.Design.Text.Button.FontWeight}"/><Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.Form.Heading.Margin}"/></Style>
+ <Style x:Key="Phiale.Design.Style.Form.Label" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Body}"><Setter Property="FontSize" Value="{DynamicResource Phiale.Design.Text.BodySmall.FontSize}"/><Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.Form.Label.Margin}"/></Style>
+ <Style x:Key="Phiale.Design.Style.Form.Help" TargetType="TextBlock" BasedOn="{StaticResource Phiale.Design.Style.Text.Secondary}"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.Form.Help.Margin}"/></Style>
+ <Style x:Key="Phiale.Design.Style.Form.Choice" TargetType="ToggleButton" BasedOn="{StaticResource Phiale.Design.Style.ToggleButton}">
+  <Setter Property="Margin" Value="{DynamicResource Phiale.Design.Thickness.Form.Choice.Margin}"/>
+  <Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Size.Form.FieldHeight}"/>
+  <Style.Triggers>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsChecked" Value="True"/></MultiTrigger.Conditions>
+    <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.Light}"/>
+    <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.Light}"/>
+   </MultiTrigger>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsChecked" Value="True"/></MultiTrigger.Conditions>
+    <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.Dark}"/>
+    <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.Dark}"/>
+   </MultiTrigger>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsChecked" Value="True"/></MultiTrigger.Conditions>
+    <Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Fill.HighContrast}"/>
+    <Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Action.Primary.Text.HighContrast}"/>
+   </MultiTrigger>
+  </Style.Triggers>
+ </Style>
+ <Style x:Key="Phiale.Design.Style.Form.ComboBox" TargetType="ComboBox" BasedOn="{StaticResource Phiale.Design.Style.ComboBox}"><Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Size.Form.FieldHeight}"/></Style>
+ <Style x:Key="Phiale.Design.Style.Form.Actions" TargetType="Border">
+  <Setter Property="Padding" Value="{DynamicResource Phiale.Design.Thickness.Form.Actions.Padding}"/><Setter Property="BorderThickness" Value="{DynamicResource Phiale.Design.Thickness.Form.Actions.Border}"/>
+  <Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Light}"/>
+  <Style.Triggers><Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.Dark}"/></Trigger><Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="BorderBrush" Value="{DynamicResource Phiale.Design.Brush.Border.Subtle.HighContrast}"/></Trigger></Style.Triggers>
+ </Style>
+ <Style x:Key="Phiale.Design.Style.Form.ValidationSummary" TargetType="Button" BasedOn="{StaticResource Phiale.Design.Style.Button.Tertiary}">
+  <Setter Property="HorizontalContentAlignment" Value="Left"/>
+  <Setter Property="ContentTemplate"><Setter.Value><DataTemplate><TextBlock Text="{Binding}" TextWrapping="Wrap"/></DataTemplate></Setter.Value></Setter>
+  <Style.Triggers>
+   <Trigger Property="design:ThemeScope.Mode" Value="Light"><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill.Light}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text.Light}"/></Trigger>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Light"/><Condition Property="IsMouseOver" Value="True"/></MultiTrigger.Conditions><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Hover.Fill.Light}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text.Light}"/></MultiTrigger>
+   <Trigger Property="design:ThemeScope.Mode" Value="Dark"><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill.Dark}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text.Dark}"/></Trigger>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="Dark"/><Condition Property="IsMouseOver" Value="True"/></MultiTrigger.Conditions><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Hover.Fill.Dark}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text.Dark}"/></MultiTrigger>
+   <Trigger Property="design:ThemeScope.Mode" Value="HighContrast"><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Danger.Fill.HighContrast}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Danger.Text.HighContrast}"/></Trigger>
+   <MultiTrigger><MultiTrigger.Conditions><Condition Property="design:ThemeScope.Mode" Value="HighContrast"/><Condition Property="IsMouseOver" Value="True"/></MultiTrigger.Conditions><Setter Property="Background" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Fill.HighContrast}"/><Setter Property="Foreground" Value="{DynamicResource Phiale.Design.Brush.Selection.Active.Text.HighContrast}"/></MultiTrigger>
+  </Style.Triggers>
+ </Style>
+ <Style x:Key="Phiale.Design.Style.Form.PasswordBox" TargetType="PasswordBox" BasedOn="{StaticResource Phiale.Design.Style.PasswordBox}"><Setter Property="MinHeight" Value="{DynamicResource Phiale.Design.Size.Form.FieldHeight}"/></Style>
+</ResourceDictionary>

@@ -94,6 +94,12 @@ public partial class MainWindow : Window
     }
     public async Task Check()
     {
+        if (Environment.GetEnvironmentVariable("PHIALE_DESIGN_CHECKBOX_ONLY") == "1")
+        {
+            await CheckCheckBoxes();
+            Report("PASS checkbox_checks=" + checks);
+            return;
+        }
         await CheckToolCards();
         await CheckSplitters();
         await CheckChevrons();
